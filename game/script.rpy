@@ -13,8 +13,11 @@ label start:
             j "No"
             j "You're hired"
             j "No questions asked"
+        "Wow, the government just sanctions you not paying us?":
+            j "You'd be surprised how much you can get away with when you have a nuclear arsenal to rival the country of Turkey"
     j "I'm the staff manager, Jack"
     j "We have been short on staff ever since everyone else was blinded by Aiden's reflective Irish skin, so it's a miracle you came when you did."
+    j "What few Slave labor we have has been consumed by {i}The Hallway{/i}"
     menu:
         "Is your head a microwave?":
             j "Yes"

@@ -27,7 +27,7 @@ label bonzi_intro:  # Defining a label called 'bonzi_intro'
     voice "bonzi_1.wav"  # Playing an audio file
     b "Hello there, Employee"  # Displaying text
     menu:
-        "your the ape!":
+        "You're the ape!":
             voice "bonzi_2.wav"  # Playing an audio file
             b "Yes, it is I Bonzi, your Union Manager"  # Displaying text
             voice "bonzi_3.wav"  # Playing an audio file
@@ -53,7 +53,8 @@ label bonzi_intro:  # Defining a label called 'bonzi_intro'
                     menu:
                         "i don't know, isn't that, y'know {i}looks around{/i} illegal?":
                             voice "bonzi_12.wav"  # Playing an audio file
-                            b "yes you ham sack. if anyone cared about legality then this buisness would have collapsed in the 70s"  # Displaying text
+                            b "Yes you ham sack. if anyone cared about legality then this buisness would have collapsed in the 70s"  # Displaying text
+                            b "Aiden's orphan consumption alone would have gotten this place shutdown before 1995"
                             b "Now I must go before they catch onto my plans"  # Displaying text
                             b "Goodbye, Employee. I expect great results from you"  # Displaying text
 
