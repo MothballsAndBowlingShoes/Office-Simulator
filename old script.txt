@@ -1,0 +1,124 @@
+scene lobby
+    play music "main.mp3"
+    show mcrwv
+    voice "m1.mp3"
+    m "hello, you're here for the interview, right?"
+
+
+    menu:
+        "Yes":
+            voice "m2.mp3"
+            m "Good, we need someone to replace dave eversince he was blinded by aiden"
+
+            menu:
+                "Okay":
+                    voice "m4.mp3"
+                    m "good. let me give you a tour"
+
+
+                "Blinded?":
+                    voice "m3.mp3"
+                    m "Blinded! who said anything about blinded."
+
+                    menu:
+                        "uh, you did":
+                            voice "m5.mp3"
+                            m "I did? well i meant uh..."
+
+                            voice "m6.mp3"
+                            m "collided..."
+
+                            voice "m7.mp3"
+                            m "yeah, collided, thats what i meant,"
+
+                            menu:
+                                "are you sure this job is safe?":
+                                    voice "m9.mp3"
+                                    "{font=font2.ttf}NO! RUN! RUN FAR AWAY FROM HERE AND DONT LOOK BACK!{/font}"
+                                    menu:
+                                        "GET THE FUCK OUT OF THERE!":
+                                            jump run_end
+
+                                "okay?":
+                                    voice "m8.mp3"
+                                    m "anyways, before we get started let me give you the tour"
+
+                                    voice "m10.mp3"
+
+                                    m "right now were in the lobby"
+
+                                    m "here you can talk to customers."
+
+                                    m "do not harrass the customers, employee"
+
+                                    m "do not touch the customers either"
+
+                                    m "{i}if you do you will be executed by our french firing squad, do you understand?{/i}"
+
+                                    menu:
+                                        "Understood":
+                                            m "good"
+                                            jump tour2
+
+                                        "Did you say Firing Squad?":
+                                            m "yes"
+                                            "as in the firing squad that executes you?"
+                                            m "{i}did i stutter?{/i}"
+                                            m "anyways, on to the next room"
+                                            jump tour2
+
+
+label tour2:
+    scene boardroom
+    show mcrwv
+
+    m "here is the board room where we'll talk about going ons in the company"
+
+    m "{b}Remember. Tuesday Is doge petting Night.{/b}"
+
+    m "And Thursday is Weekly Dark Lord summon day"
+
+    menu:
+        "Can't I just summon him now?":
+            m "{b}NO, YOU CAN NOT!{/b}"
+            y "Fine"
+            y "{i}I'll just summon him later{/i}"
+            m "What?"
+            y "What?"
+            m "Anyways, onto the next room"
+            scene control
+            show mcrwv
+
+            m "This is the control room"
+
+            m "You can monitor anything going on in the building with our Security system"
+
+            m "{b}DO NOT USE THIS ROOM TO WATCH THE LADY'S BATHROOM{/b}"
+
+            m "I can't tell you how many people we had to fire for doing that"
+
+            scene lounge
+            show mcrwv
+
+            m "This the employees lounge"
+            m "Here you can relax after working for a while"
+            m "This is also where you can sleep"
+            menu:
+                "Can't i just sleep at home?":
+                    m "NO! YOU'RE NEVER LEAVING HERE!"
+                    m "I HAVN'T SEEN MY FAMILY IN 7 YEARS!"
+                    m "CORPORATE HAS MY THEM HELD HOSTAGE!"
+                    m "MY LITTLE TIMMY SHOULD BE IN HIGH SCHOOL NOW!"
+                    m "EVERDAY I WEE-"
+                    m "oh, uh, sorry"
+                    m "My family is a very touchy subject for me"
+                    m "anyways on to the next room"
+                    scene hallway
+                    show mcrwv
+                    m "Finaly this is the {i}Hallway of Endless Doom{/i}"
+                    m "{i}If you go down it you may never find your way back out{/i}"
+                    scene lobby
+                    show mcrwv
+                    m "this concludes our tour"
+                    m "If you have any questions please do not ask me"
+                    jump lobby
