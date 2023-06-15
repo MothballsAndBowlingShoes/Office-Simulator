@@ -5,6 +5,7 @@ default first_visit = 0  # Setting a default value for the variable 'first_visit
 image darken = "#00000088"  # Declaring an image variable with a color value
 
 $ first_visit = 0  # Setting the value of 'first_visit' to 0
+$ bonzi_quest_update = false;
 
 label bathroom:  # Defining a label called 'bathroom'
     scene bathroom  # Displaying the bathroom scene
