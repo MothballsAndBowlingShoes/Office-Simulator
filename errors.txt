@@ -2,9 +2,17 @@
 errors listed below, and try again.
 
 
-File "game/bathroom.rpy", line 76: Menu does not contain any choices.
-    menu:
-         ^
+File "game/bathroom.rpy", line 7: expected statement.
+    bonzi_quest_stage += 1
+                      ^
+
+File "game/bathroom.rpy", line 10: expected statement.
+    bonzi_quest_stage += 1
+                      ^
+
+File "game/bathroom.rpy", line 11: expected statement.
+    bonzi_quest_update = false
+                       ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Sun Nov 27 20:11:30 2022
+Fri Jun 16 10:34:15 2023
