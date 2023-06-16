@@ -2,6 +2,7 @@ define j = Character("Jack", what_slow_cps=50, what_slow_abortable=False, color=
 define y = Character("You", what_slow_cps=50, what_slow_abortable=False, color="#ffffff")
 define a = Character("Aiden", what_slow_cps=50, what_slow_abortable=False, color="#ffffff")
 define b = Character("Bonzi", what_slow_cps=50, what_slow_abortable=False, color="#ffffff")
+define g = Character("Giuseppe", what_slow_cps=50, what_slow_abortable=False, color="#ffffff")
 
 label start:
     scene lobby
