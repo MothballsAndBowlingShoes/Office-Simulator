@@ -6,42 +6,41 @@ label bathroom:  # Defining a label called 'bathroom'
         jump bonzi_intro  # Jumping to the label 'bonzi_intro' if the condition is true
         python:
             bonzi_quest_stage += 1
-    elif bonzi_quest_stage == 1 && bonzi_quest_update == true:
+    elif bonzi_quest_stage == 1:
         jump bonzi_quest0
         python:
             bonzi_quest_stage += 1
             bonzi_quest_update = false
-
+    
     menu:
         "What do you want to do?"
 
         "Throw Cherry bombs at the urinals":
-            jump event_urinals  # Jumping to the label 'event_urinals' if selected
+            jump event_urinals_firecracker  # Jumping to the label 'event_urinals' if selected
+            
 
-label event_urinals:  # Defining a label called 'event_urinals'
+label event_urinals_firecracker:  # Defining a label called 'event_urinals'
     "Despite the risk of getting fired, you procure a set of fire crackers from your pockets"  
     menu:
         "{i}Do a sick flip!{/i}":
-            "You push off the ground and nail a sick flip whil throwing the first Cherry Bomb"  
+            "You push off the ground and nail a sick flip whil throwing the first Cherry Bomb"
+            play audio "sound_effects/fire_cracker.mp3"  
+            with Shake((0, 0, 0, 0), 0.5, dist=30)
             "{b}Bang!{/b}"  
-            with Shake((0, 0, 0, 0), 0.5, dist=30)  # Applying a Shake effect
             "You hit the first urinal dead on"  
     menu:
         "{i}Do another flip!!{/i}":
+            play audio "sound_effects/fire_cracker.mp3"  
+            with Shake((0, 0, 0, 0), 0.5, dist=30)
             "{b}Boom!!{/b}"  
-            with Shake((0, 0, 0, 0), 0.5, dist=30)  # Applying a Shake effect
+            
             "You do another flip and nail the other urinal!"  
-    show jack_neutral  # Showing the 'jack_neutral' image
+    show jack neutral  # Showing the 'jack_neutral' image
     "Jack rushes into the bathroom and gazes upon you in horror as you blow up yet another urinal"  
-    show jack_pointing  # Showing the 'jack_pointing' image
-    j "Get. In. My. Office. Now."  
-
-default first_visit = 0  # Setting a default value for the variable 'first_visit'
+    show jack pointing  # Showing the 'jack_pointing' image
+    j "Get.{w} In.{w} My.{w} Office.{w} Now.{w}"  
 
 image darken = "#00000088"  # Declaring an image variable with a color value
-
-$ bonzi_quest_stage = 0  # Setting the value of 'first_visit' to 0
-$ bonzi_quest_update = false;
 
 label bonzi_intro:  # Defining a label called 'bonzi_intro'
     show darken with dissolve  # Showing the 'darken' image with dissolve effect
@@ -73,6 +72,10 @@ label bonzi_intro:  # Defining a label called 'bonzi_intro'
                     b "He has imprisoned me here with Ancient Microwave Wizardry"  
                     voice "bonzi_11.wav"  # Playing an audio file
                     b "I need you to help me escape"  
+                    b "I want you to steal contraband from around the office that will help me escape"
+                    "The ape hands you an uncomfortably soggy list of items for you to find"
+                    "Pulling your hand away, it smells of both urnine and booze"
+                    "You uncomfortably slip the paper into your back pocket"
                     menu:
                         "I don't know, isn't that, y'know {i}*looks around*{/i} illegal?":
                             voice "bonzi_12.wav"  # Playing an audio file
@@ -82,7 +85,6 @@ label bonzi_intro:  # Defining a label called 'bonzi_intro'
                             b "Goodbye, Employee. I expect great results from you"  
 
                             $ bonzi_quest = 1  # Assigning the value 1 to the variable 'bonzi_quest'
-                            $ first_visit = 1  # Assigning the value 1 to the variable 'first_visit'
                             "..."  
                             "..."  
                             "{i}What the fuck just happened?{/i}"  
@@ -91,4 +93,5 @@ label bonzi_intro:  # Defining a label called 'bonzi_intro'
 
 label bonzi_quest0: #Help Bonzi Buddy by collecting various unconventional items needed for the escape plan. These may include items like a rubber Dildo, a feather hat belonging to King George the VII, a tub of glitter, and a live chicken
     b "Ah, welcome back employee"
-    b "I see you gathered the items i require"
+    b "I see you gathered the items I requested"
+    b ""

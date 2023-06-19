@@ -2,17 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/bathroom.rpy", line 7: expected statement.
-    bonzi_quest_stage += 1
-                      ^
-
-File "game/bathroom.rpy", line 10: expected statement.
-    bonzi_quest_stage += 1
-                      ^
-
-File "game/bathroom.rpy", line 11: expected statement.
-    bonzi_quest_update = false
-                       ^
+File "game/script.rpy", line 36: choice menuitem expects a non-empty block.
+    "Wow! you guys have hallways? Not even the McDonalds i worked at could afford those!":
+                                                                                          ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Fri Jun 16 10:34:15 2023
+Sun Jun 18 12:00:29 2023

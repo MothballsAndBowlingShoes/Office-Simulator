@@ -1,13 +1,7 @@
-define j = Character("Jack", what_slow_cps=50, what_slow_abortable=False, color="#ffffff")
-define y = Character("You", what_slow_cps=50, what_slow_abortable=False, color="#ffffff")
-define a = Character("Aiden", what_slow_cps=50, what_slow_abortable=False, color="#ffffff")
-define b = Character("Bonzi", what_slow_cps=50, what_slow_abortable=False, color="#ffffff")
-define g = Character("Giuseppe", what_slow_cps=50, what_slow_abortable=False, color="#ffffff")
-
 label start:
     scene lobby
-    play music "main.mp3"
-    show jack_neutral
+    play music "day1.mp3"
+    show jack neutral
     j "Welcome to your {i}new{/i} and {i}mostly{/i} unpaid and illegal job"
     menu:
         "Isn't there a process to these things?":
@@ -28,7 +22,8 @@ label start:
 
             menu:
                 "What about your mother?":
-                    j "EMPLOYEE, WE DO NOT TALK ABOUT MY DIRTY COMMUNIST MOTHER, DO YOU UNDERSTAND ME?"
+                    j "Employee..."
+                    j "WE DO NOT TALK ABOUT MY DIRTY COMMUNIST MOTHER, DO YOU UNDERSTAND ME?"
                     menu:
                         "Yes, sir...":
                             "The man with a microwave for a head shakes it in disappointment"
@@ -39,30 +34,35 @@ label start:
             j "Who said anything about blinded?"
             y "You di-"
             jump tour_lobby
+        "Wow! you guys have hallways? Not even the McDonalds i worked at could afford those!":
+            j "Yep, We even have complementary rats"
 
 label tour_lobby:
     j "Anyways, let me give you the tour"
     j "This here is the lobby"
     j "This is where we put up our corporate front to throw the unsuspecting federal agents off our trail"
-    j "If you listen closely, you can hear their screams from the {b}pit{/b}"
+    j "If you listen closely, you can hear the POW's screams from the {i}pit{/i}"
     jump tour_elevator
 
 label tour_elevator:
     scene elevator
     with fade
-    show jack_neutral
-    play music "e1.ogg"
+    show jack neutral
     j "This here is the elevator, your local hub for navigating around the building"
     j "{i}Ignore the smell of sweat and dried blood; we still haven't cleaned up after the janitorial department's unsupervised orgy last week{/i}"
     j "Also"
-    j "If you hear any creaking coming from the shaft, just remember our company motto:"
-    show jack_pointing
+    j "If you hear any creaking coming from the shaft, just stay calm, and remember our company motto:"
+    show jack pointing
     j "{i}You're easily expendable, and you will be replaced within the first 10 hours{/i}"
-    jump tour_lounge
+    menu:
+        "Wow, don't you think that motto is rather harsh?":
+            j "You would be surprised how many people kill themselves thinking they can get out of work"
+            jump tour_lounge
 
 label tour_lounge:
     scene lounge
-    show jack_neutral
+    play music "day1.mp3"
+    show jack neutral
 
     j "This here is the employee lounge"
     j "This is where you can relax after a day of hard work"
@@ -71,7 +71,7 @@ label tour_lounge:
 
     menu:
         "Can't I sleep at home?":
-            show jack_neutral
+            show jack neutral
             with Shake((0, 0, 0, 0), 0.5, dist=30)
             j "NO! ONCE YOU ENTER HERE, THERE IS NO LEAVING!"
             with Shake((0, 0, 0, 0), 0.5, dist=30)
@@ -86,10 +86,10 @@ label tour_lounge:
 
         "What about food?":
             j "You can run down to the local McDonald's or eat the roaches off the floor; either one works"
-            show jack_neutral:
+            show jack neutral:
                 zoom 2.0 yalign 0.1 xalign -0.5 rotate -30
             j "{i}If I were you, I know which one I would choose{/i}"
-            show jack_neutral:
+            show jack neutral:
                 zoom 1.0 yalign 0.0 xalign 0.5 rotate 0
             menu:
                 "Can I use your head to cook my food?":
@@ -101,34 +101,38 @@ label tour_lounge:
 
 label tour_boardroom:
     scene boardroom
-    show jack_neutral
+    show jack neutral
     j "This is the boardroom!"
     j "Here, we host daily briefings on company updates that range from {i}helpful{/i} to {i}not helpful at all{/i}"
     j "This is also where Aiden sells his goods"
-    show jack_neutral:
+    show jack neutral:
         ease 1 left
     show aiden:
         right
     with moveinright
     a "Bask in my pale skin in its blinding glory"
-    j "{i}Try to avoid staring at him for too long...{/i}"
+    j "Try to avoid staring at him for too long..."
+    j "{i}It didn't turn out to well for the last guy who did it...{/i}"
     j "Also, anything you hear from police reports about him consuming families is purely rumor and speculation... \n{i}probably{/i}..."
     hide aiden
-    show jack_neutral:
+    show jack neutral:
     j "He will sell you objects you might need in exchange for our new cryptocurrency"
     j "{b}Office Coin{/b}"
     menu:
         "Do you accept the fiscal monetary standard established in 1792 by this fine nation's founding fathers?":
-            show jack_neutral:
-                zoom 2.0 yalign 0.1 xalign -0.5 rotate -30
+            show jack neutral:
+                zoom 2.0 yalign 0.1 xalign 2.0 rotate 30
             j "{b}No.{/b}"
-            show jack_neutral:
+            show jack neutral:
                 zoom 1.0 yalign 0.0 xalign 0.5 rotate 0
+
+        "Would you accept a Hamburger I have had in my pocket since last thursday?":
+            j "I don't even want to know why you keep hamburgers in your pocket... especially for that long!"
     jump post_tour_lobby
 
 label post_tour_lobby:
     scene lobby
-    show jack_neutral
+    show jack neutral
     j "Anyways, I believe that concludes our tour"
     j "Before you start working here, employee, I have to ask you a few questions"
 

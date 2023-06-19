@@ -4,5 +4,8 @@
         "**/*.rpa": true,
         "**/*.rpymc": true,
         "**/cache/": true
-    }
+    },
+    "workbench.colorTheme": "Abyss",
+    "workbench.iconTheme": "vs-minimal",
+    "workbench.preferredDarkColorTheme": "Abyss"
 }
