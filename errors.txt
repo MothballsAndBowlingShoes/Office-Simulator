@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/bathroom.rpy", line 76: Menu does not contain any choices.
-    menu:
-         ^
+File "game/script.rpy", line 36: choice menuitem expects a non-empty block.
+    "Wow! you guys have hallways? Not even the McDonalds i worked at could afford those!":
+                                                                                          ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Sun Nov 27 20:11:30 2022
+Sun Jun 18 12:00:29 2023
