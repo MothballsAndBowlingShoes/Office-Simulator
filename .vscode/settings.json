@@ -5,7 +5,7 @@
         "**/*.rpymc": true,
         "**/cache/": true
     },
-    "workbench.colorTheme": "Abyss",
+    "workbench.colorTheme": "Atom One Dark",
     "workbench.iconTheme": "vs-minimal",
     "workbench.preferredDarkColorTheme": "Abyss"
 }
