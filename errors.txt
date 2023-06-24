@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 36: choice menuitem expects a non-empty block.
-    "Wow! you guys have hallways? Not even the McDonalds i worked at could afford those!":
-                                                                                          ^
+File "game/nav_menu.rpy", line 18: end of line expected.
+    jump Board Room
+               ^
 
-Ren'Py Version: Ren'Py 8.0.3.22090809
-Sun Jun 18 12:00:29 2023
+Ren'Py Version: Ren'Py 8.1.0.23051307
+Sat Jun 24 10:03:42 2023

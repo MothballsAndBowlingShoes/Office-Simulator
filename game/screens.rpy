@@ -252,7 +252,7 @@ screen quick_menu():
 
             xalign 12
             yalign 0.80
-        
+
 
             textbutton _("{u}B{/u}ack") action Rollback()
             textbutton _("{u}H{/u}istory") action ShowMenu('history')

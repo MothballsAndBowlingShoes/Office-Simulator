@@ -1,28 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/bathroom.rpy", line 5, in script
-    if bonzi_quest_stage == 0:  # Checking if the variable 'first_visit' is equal to 0
-  File "game/bathroom.rpy", line 5, in <module>
-    if bonzi_quest_stage == 0:  # Checking if the variable 'first_visit' is equal to 0
-NameError: name 'bonzi_quest_stage' is not defined
+  File "game/lobby.rpy", line 5, in script call
+    call nav_menu
+  File "game/nav_menu.rpy", line 14, in script
+    jump warehouse
+ScriptError: could not find label 'warehouse'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/bathroom.rpy", line 5, in script
-    if bonzi_quest_stage == 0:  # Checking if the variable 'first_visit' is equal to 0
-  File "/Users/atticusyoung/Programming/Ren'py/Ren'py 8.0.3 SDK/renpy/ast.py", line 2115, in execute
-    if renpy.python.py_eval(condition):
-  File "/Users/atticusyoung/Programming/Ren'py/Ren'py 8.0.3 SDK/renpy/python.py", line 1092, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "/Users/atticusyoung/Programming/Ren'py/Ren'py 8.0.3 SDK/renpy/python.py", line 1085, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/bathroom.rpy", line 5, in <module>
-    if bonzi_quest_stage == 0:  # Checking if the variable 'first_visit' is equal to 0
-NameError: name 'bonzi_quest_stage' is not defined
+  File "game/lobby.rpy", line 5, in script call
+    call nav_menu
+  File "game/nav_menu.rpy", line 14, in script
+    jump warehouse
+  File "/home/deck/Programming/renpy-8.1.0-sdk/renpy/ast.py", line 1992, in execute
+    rv = renpy.game.script.lookup(target)
+  File "/home/deck/Programming/renpy-8.1.0-sdk/renpy/script.py", line 1013, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'warehouse'.
 
-macOS-10.16-x86_64-i386-64bit x86_64
-Ren'Py 8.0.3.22090809
+Linux-5.13.0-valve36-1-neptune-x86_64-with-glibc2.36 x86_64
+Ren'Py 8.1.0.23051307
 Office Simulator 2024 0.1
-Mon Jun 19 00:21:03 2023
+Sat Jun 24 10:01:17 2023

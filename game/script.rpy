@@ -1,8 +1,9 @@
 label start:
     scene lobby
-    play music "day1.mp3"
+    play music "day_1_theme.mp3"
     show jack neutral
-    j "Welcome to your {i}new{/i} and {i}mostly{/i} unpaid and illegal job"
+    j "Welcome to your {i}new{/i} unpaid and
+    {i}mostly{/i} illegal job"
     menu:
         "Isn't there a process to these things?":
             j "No"
@@ -59,9 +60,13 @@ label tour_elevator:
             j "You would be surprised how many people kill themselves thinking they can get out of work"
             jump tour_lounge
 
+label tour_offices:
+    
+label tour_hallway:
+
 label tour_lounge:
     scene lounge
-    play music "day1.mp3"
+    play music "day_1_theme.mp3"
     show jack neutral
 
     j "This here is the employee lounge"
@@ -76,7 +81,6 @@ label tour_lounge:
             j "NO! ONCE YOU ENTER HERE, THERE IS NO LEAVING!"
             with Shake((0, 0, 0, 0), 0.5, dist=30)
             j "I HAVEN'T SEEN MY WIFE AND KIDS IN 12 YEARS!"
-            ##show jack neutral
             with Shake((0, 0, 0, 0), 0.5, dist=30)
             "The crazy microwave man backs you into a corner"
             j "Ohhhhhh"
@@ -117,7 +121,7 @@ label tour_boardroom:
     hide aiden
     show jack neutral:
     j "He will sell you objects you might need in exchange for our new cryptocurrency"
-    j "{b}Office Coin{/b}"
+    j "{size=+20}{b}Office Coin{/b}"
     menu:
         "Do you accept the fiscal monetary standard established in 1792 by this fine nation's founding fathers?":
             show jack neutral:
@@ -128,9 +132,14 @@ label tour_boardroom:
 
         "Would you accept a Hamburger I have had in my pocket since last thursday?":
             j "I don't even want to know why you keep hamburgers in your pocket... especially for that long!"
-    jump post_tour_lobby
+    jump post_tour
 
-label post_tour_lobby:
+label tour_warehouse:
+
+label tour_parking_garage:
+
+
+label post_tour:
     scene lobby
     show jack neutral
     j "Anyways, I believe that concludes our tour"
