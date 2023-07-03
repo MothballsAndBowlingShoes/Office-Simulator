@@ -1,4 +1,4 @@
-﻿################################################################################
+################################################################################
 ## Initialization
 ################################################################################
 
@@ -57,13 +57,13 @@ define gui.name_color = '#ffffff'
 ## Fonts and Font Sizes ########################################################
 
 ## The font used for in-game text.
-define gui.text_font = "tahoma.ttf"
+define gui.text_font = "fonts/tahoma.ttf"
 
 ## The font used for character names.
-define gui.name_text_font = "verdana.ttf"
+define gui.name_text_font = "fonts/verdana.ttf"
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = "tahoma.ttf"
+define gui.interface_text_font = "fonts/tahoma.ttf"
 
 ## The size of normal dialogue text.
 define gui.text_size = 22

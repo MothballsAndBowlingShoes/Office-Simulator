@@ -1,2 +1,0 @@
-label parking_garage:
-    

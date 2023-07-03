@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "script/quests/Jack/jackQuest.rpy", line 7: choice menuitem expects a non-empty block.
+    "Well... The court {i}did{/i} say the Nuking of that Pizza Joint in Canada didn't count due to the pizza being so horrendous it was self defense":
+                                                                                                                                                      ^
+
+Ren'Py Version: Ren'Py 8.0.3.22090809
+Tue Feb 13 13:31:10 2024

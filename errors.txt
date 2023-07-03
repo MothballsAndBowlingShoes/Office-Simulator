@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/nav_menu.rpy", line 18: end of line expected.
-    jump Board Room
-               ^
+File "game/script/rooms/jackOffice.rpy", line 5: expected statement.
+    Menu:
+        ^
 
-Ren'Py Version: Ren'Py 8.1.0.23051307
-Sat Jun 24 10:03:42 2023
+Ren'Py Version: Ren'Py 8.0.3.22090809
+Tue Feb 13 13:26:57 2024

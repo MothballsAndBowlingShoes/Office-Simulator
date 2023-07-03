@@ -1,0 +1,32 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "renpy/common/00gamemenu.rpy", line 170, in script
+    $ ui.interact()
+  File "renpy/common/00gamemenu.rpy", line 170, in <module>
+    $ ui.interact()
+TypeError: __init__() missing 1 required positional argument: 'steps'
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "renpy/common/00gamemenu.rpy", line 170, in script
+    $ ui.interact()
+  File "/Applications/Ren'Py/renpy/ast.py", line 1131, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Applications/Ren'Py/renpy/python.py", line 1061, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00gamemenu.rpy", line 170, in <module>
+    $ ui.interact()
+  File "/Applications/Ren'Py/renpy/ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Applications/Ren'Py/renpy/display/core.py", line 3377, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "/Applications/Ren'Py/renpy/display/core.py", line 3752, in interact_core
+    trans = self.ongoing_transition[None](
+TypeError: __init__() missing 1 required positional argument: 'steps'
+
+macOS-10.16-x86_64-i386-64bit x86_64
+Ren'Py 8.0.3.22090809
+Office Simulator 2025 Dev Version
+Mon Dec  4 23:07:15 2023

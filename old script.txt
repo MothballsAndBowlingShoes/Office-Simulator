@@ -8,7 +8,7 @@ scene lobby
     menu:
         "Yes":
             voice "m2.mp3"
-            m "Good, we need someone to replace dave eversince he was blinded by aiden"
+            m "Good, we need someone to replace dave ever since he was blinded by aiden"
 
             menu:
                 "Okay":
