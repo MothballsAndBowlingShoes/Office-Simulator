@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "script/quests/Jack/jackQuest.rpy", line 7: choice menuitem expects a non-empty block.
-    "Well... The court {i}did{/i} say the Nuking of that Pizza Joint in Canada didn't count due to the pizza being so horrendous it was self defense":
-                                                                                                                                                      ^
+File "script/quests/Jack/jackQuest.rpy", line 31: ATL statement contains two expressions in a row; is one of them a misspelled property? If not, separate them with pass.
+    zoom 1.0 yalign 0.0 xalign 0.5 rotate 0 ease 1
+                                                  ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Tue Feb 13 13:31:10 2024
+Sat Feb 17 16:51:58 2024

@@ -1,17 +1,17 @@
-Tue Feb 13 13:28:25 2024
+Sat Feb 17 16:47:02 2024
 macOS-10.16-x86_64-i386-64bit
 Ren'Py 8.0.3.22090809
  
 
-Bootstrap to the start of init.init took 0.06s
+Bootstrap to the start of init.init took 0.05s
 Early init took 0.00s
 Loader init took 0.01s
 Loading error handling took 0.03s
-Loading script took 0.11s
+Loading script took 0.14s
 Loading save slot metadata. took 0.02s
 Loading persistent took 0.00s
 Faled to initialize steam: OSError("dlopen(/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib, 0x0006): tried: '/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file), '/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file)")
-Running init code took 0.04s
+Running init code took 0.06s
 Loading analysis data took 0.02s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
@@ -22,9 +22,9 @@ Initial gc. took 0.02s
 DPI scale factor: 1.000000
 Creating interface object took 0.00s
 Cleaning stores took 0.00s
-Init translation took 0.03s
+Init translation took 0.05s
 Build styles took 0.00s
-Load screen analysis took 0.04s
+Load screen analysis took 0.03s
 Analyze screens took 0.00s
 Save screen analysis took 0.00s
 Prepare screens took 0.06s
@@ -32,7 +32,85 @@ Save pyanalysis. took 0.00s
 Save bytecode. took 0.00s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.35s
+Interface start took 0.45s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 640'
+Version: b'2.1 INTEL-22.1.29'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1338, 753) drawable=(2676, 1506)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "script/script.rpyc", line 82, in script
+  File "/Applications/Ren'Py/renpy/ast.py", line 921, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "/Applications/Ren'Py/renpy/exports.py", line 1373, in say
+    who(what, *args, **kwargs)
+  File "/Applications/Ren'Py/renpy/character.py", line 1266, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "/Applications/Ren'Py/renpy/character.py", line 927, in do_display
+    display_say(who,
+  File "/Applications/Ren'Py/renpy/character.py", line 666, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "/Applications/Ren'Py/renpy/ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Applications/Ren'Py/renpy/display/core.py", line 3377, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "/Applications/Ren'Py/renpy/display/core.py", line 4103, in interact_core
+    renpy.audio.audio.periodic()
+  File "/Applications/Ren'Py/renpy/audio/audio.py", line 1166, in periodic
+    raise_(exc[0], exc[1], exc[2])
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/site-packages/future/utils/__init__.py", line 441, in raise_
+  File "/Applications/Ren'Py/renpy/audio/audio.py", line 1144, in periodic_thread_main
+    periodic_pass()
+  File "/Applications/Ren'Py/renpy/audio/audio.py", line 1086, in periodic_pass
+    c.periodic()
+  File "/Applications/Ren'Py/renpy/audio/audio.py", line 517, in periodic
+    topf = load(filename)
+  File "/Applications/Ren'Py/renpy/audio/audio.py", line 70, in load
+    rv = renpy.loader.load(fn)
+  File "/Applications/Ren'Py/renpy/loader.py", line 820, in load
+    raise IOError("Couldn't find file '%s'." % name)
+OSError: Couldn't find file 'main.mp3'.
+
+While running game code:
+OSError: Couldn't find file 'main.mp3'.
+Resetting cache.
+Bootstrap to the start of init.init took 39.79s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.04s
+Loading script took 0.15s
+Loading save slot metadata. took 0.03s
+Loading persistent took 0.00s
+Faled to initialize steam: OSError("dlopen(/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib, 0x0006): tried: '/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file), '/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file)")
+Running init code took 0.06s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.00s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.04s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.12s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1440, 900)
@@ -45,62 +123,37 @@ Display Info: None
 Screen sizes: virtual=(1280, 720) physical=(1338, 753) drawable=(2676, 1506)
 Maximum texture size: 4096x4096
 Resetting cache.
-Bootstrap to the start of init.init took 164.79s
+Bootstrap to the start of init.init took 52.23s
 Early init took 0.00s
 Loader init took 0.02s
 Loading error handling took 0.03s
-Loading script took 0.10s
-Loading save slot metadata. took 0.02s
-Loading persistent took 0.00s
-
-File "script/quests/Jack/jackQuest.rpy", line 7: choice menuitem expects a non-empty block.
-    "Well... The court {i}did{/i} say the Nuking of that Pizza Joint in Canada didn't count due to the pizza being so horrendous it was self defense":
-                                                                                                                                                      ^
-DPI scale factor: 1.000000
-Interface start took 0.06s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1440, 900)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Intel Inc.'"
-Renderer: b'Intel(R) Iris(TM) Plus Graphics 640'
-Version: b'2.1 INTEL-22.1.29'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1338, 753) drawable=(2676, 1506)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 181.52s
-Early init took 0.00s
-Loader init took 0.01s
-Loading error handling took 0.02s
-Loading script took 0.11s
-Loading save slot metadata. took 0.02s
+Loading script took 0.20s
+Loading save slot metadata. took 0.03s
 Loading persistent took 0.00s
 Faled to initialize steam: OSError("dlopen(/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib, 0x0006): tried: '/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file), '/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file)")
-Running init code took 0.04s
-Loading analysis data took 0.01s
+Running init code took 0.05s
+Loading analysis data took 0.02s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
 Backing up script files to '/Users/atticusyoung/Library/RenPy/backups/game':
 Dump and make backups. took 0.00s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc. took 0.02s
+Initial gc. took 0.03s
 DPI scale factor: 1.000000
 Creating interface object took 0.00s
 Cleaning stores took 0.00s
-Init translation took 0.03s
+Init translation took 0.05s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
 Save screen analysis took 0.02s
-Prepare screens took 0.06s
+Prepare screens took 0.08s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.06s
+Interface start took 0.12s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1440, 900)
@@ -113,15 +166,101 @@ Display Info: None
 Screen sizes: virtual=(1280, 720) physical=(1338, 753) drawable=(2676, 1506)
 Maximum texture size: 4096x4096
 Resetting cache.
-Bootstrap to the start of init.init took 300.74s
+Bootstrap to the start of init.init took 111.31s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.02s
+Loading script took 0.20s
+Loading save slot metadata. took 0.03s
+Loading persistent took 0.00s
+Faled to initialize steam: OSError("dlopen(/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib, 0x0006): tried: '/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file), '/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file)")
+Running init code took 0.06s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to '/Users/atticusyoung/Library/RenPy/backups/game':
+Dump and make backups. took 0.00s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.02s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.11s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 640'
+Version: b'2.1 INTEL-22.1.29'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1338, 753) drawable=(2676, 1506)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 126.66s
+Early init took 0.00s
+Loader init took 0.01s
+Loading error handling took 0.01s
+Loading script took 0.11s
+Loading save slot metadata. took 0.03s
+Loading persistent took 0.00s
+Faled to initialize steam: OSError("dlopen(/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib, 0x0006): tried: '/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file), '/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file)")
+Running init code took 0.04s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to '/Users/atticusyoung/Library/RenPy/backups/game':
+Dump and make backups. took 0.00s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.14s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.15s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 640'
+Version: b'2.1 INTEL-22.1.29'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1338, 753) drawable=(2676, 1506)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 172.31s
 Early init took 0.00s
 Loader init took 0.01s
 Loading error handling took 0.02s
-Loading script took 0.10s
+Loading script took 0.17s
 Loading save slot metadata. took 0.02s
 Loading persistent took 0.00s
 Faled to initialize steam: OSError("dlopen(/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib, 0x0006): tried: '/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file), '/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file)")
-Running init code took 0.05s
+Running init code took 0.04s
 Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
@@ -133,17 +272,17 @@ Initial gc. took 0.03s
 DPI scale factor: 1.000000
 Creating interface object took 0.00s
 Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.01s
+Init translation took 0.04s
+Build styles took 0.00s
 Load screen analysis took 0.00s
-Analyze screens took 0.02s
+Analyze screens took 0.01s
 Save screen analysis took 0.02s
-Prepare screens took 0.08s
+Prepare screens took 0.05s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.07s
+Interface start took 0.09s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1440, 900)
@@ -156,32 +295,314 @@ Display Info: None
 Screen sizes: virtual=(1280, 720) physical=(1338, 753) drawable=(2676, 1506)
 Maximum texture size: 4096x4096
 Resetting cache.
-Bootstrap to the start of init.init took 329.76s
+Bootstrap to the start of init.init took 187.74s
 Early init took 0.00s
-Loader init took 0.02s
-Loading error handling took 0.03s
-Loading script took 0.28s
+Loader init took 0.01s
+Loading error handling took 0.01s
+Loading script took 0.11s
 Loading save slot metadata. took 0.02s
 Loading persistent took 0.00s
 Faled to initialize steam: OSError("dlopen(/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib, 0x0006): tried: '/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file), '/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file)")
-Running init code took 0.06s
-Loading analysis data took 0.21s
+Running init code took 0.04s
+Loading analysis data took 0.02s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
 Backing up script files to '/Users/atticusyoung/Library/RenPy/backups/game':
 Dump and make backups. took 0.00s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc. took 0.07s
+Initial gc. took 0.04s
 DPI scale factor: 1.000000
 Creating interface object took 0.00s
 Cleaning stores took 0.00s
-Init translation took 0.09s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 640'
+Version: b'2.1 INTEL-22.1.29'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1338, 753) drawable=(2676, 1506)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 236.31s
+Early init took 0.00s
+Loader init took 0.01s
+Loading error handling took 0.02s
+Loading script took 0.12s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+Faled to initialize steam: OSError("dlopen(/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib, 0x0006): tried: '/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file), '/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file)")
+Running init code took 0.04s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to '/Users/atticusyoung/Library/RenPy/backups/game':
+Dump and make backups. took 0.00s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.10s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 640'
+Version: b'2.1 INTEL-22.1.29'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1338, 753) drawable=(2676, 1506)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 260.76s
+Early init took 0.00s
+Loader init took 0.01s
+Loading error handling took 0.01s
+Loading script took 0.11s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+Faled to initialize steam: OSError("dlopen(/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib, 0x0006): tried: '/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file), '/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file)")
+Running init code took 0.08s
+Loading analysis data took 0.04s
+Analyze and compile ATL took 0.01s
+Index archives took 0.00s
+Backing up script files to '/Users/atticusyoung/Library/RenPy/backups/game':
+Dump and make backups. took 0.00s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.12s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.16s
 Build styles took 0.01s
 Load screen analysis took 0.00s
-Analyze screens took 0.02s
+Analyze screens took 0.03s
 Save screen analysis took 0.03s
-Prepare screens took 0.08s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.12s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 640'
+Version: b'2.1 INTEL-22.1.29'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1338, 753) drawable=(2676, 1506)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 295.81s
+Early init took 0.00s
+Loader init took 0.03s
+Loading error handling took 0.02s
+Loading script took 0.25s
+Loading save slot metadata. took 0.03s
+Loading persistent took 0.00s
+
+File "script/quests/Jack/jackQuest.rpy", line 31: ATL statement contains two expressions in a row; is one of them a misspelled property? If not, separate them with pass.
+    zoom 1.0 yalign 0.0 xalign 0.5 rotate 0 ease 1
+                                                  ^
+DPI scale factor: 1.000000
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 640'
+Version: b'2.1 INTEL-22.1.29'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1338, 753) drawable=(2676, 1506)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 303.56s
+Early init took 0.00s
+Loader init took 0.01s
+Loading error handling took 0.01s
+Loading script took 0.11s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+Faled to initialize steam: OSError("dlopen(/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib, 0x0006): tried: '/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file), '/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file)")
+Running init code took 0.05s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to '/Users/atticusyoung/Library/RenPy/backups/game':
+Dump and make backups. took 0.00s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.02s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.12s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 640'
+Version: b'2.1 INTEL-22.1.29'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1338, 753) drawable=(2676, 1506)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 315.95s
+Early init took 0.00s
+Loader init took 0.01s
+Loading error handling took 0.02s
+Loading script took 0.10s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+Faled to initialize steam: OSError("dlopen(/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib, 0x0006): tried: '/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file), '/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file)")
+Running init code took 0.03s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to '/Users/atticusyoung/Library/RenPy/backups/game':
+Dump and make backups. took 0.00s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.09s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.12s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 640'
+Version: b'2.1 INTEL-22.1.29'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1338, 753) drawable=(2676, 1506)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 424.88s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.03s
+Loading script took 0.26s
+Loading save slot metadata. took 0.03s
+Loading persistent took 0.00s
+Faled to initialize steam: OSError("dlopen(/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib, 0x0006): tried: '/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file), '/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file)")
+Running init code took 0.06s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to '/Users/atticusyoung/Library/RenPy/backups/game':
+Dump and make backups. took 0.00s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 640'
+Version: b'2.1 INTEL-22.1.29'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1338, 753) drawable=(2676, 1506)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 435.73s
+Early init took 0.00s
+Loader init took 0.01s
+Loading error handling took 0.01s
+Loading script took 0.09s
+Loading save slot metadata. took 0.02s
+Loading persistent took 0.00s
+Faled to initialize steam: OSError("dlopen(/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib, 0x0006): tried: '/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file), '/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file)")
+Running init code took 0.04s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.00s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.03s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.06s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.02s
 Running _start took 0.00s
@@ -200,8 +621,57 @@ Screen sizes: virtual=(1280, 720) physical=(1338, 753) drawable=(2676, 1506)
 Maximum texture size: 4096x4096
 Cleaning stores took 0.00s
 Init translation took 0.00s
-Build styles took 0.01s
-Load screen analysis took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.03s
 Analyze screens took 0.00s
 Prepare screens took 0.00s
 Running _start took 0.00s
+Traceback (most recent call last):
+  File "renpy/common/00console.rpy", line 681, in run
+    he.result = command_fn(l)
+  File "renpy/common/00console.rpy", line 982, in jump
+    raise Exception("Ren'Py script not enabled. Not jumping.")
+Exception: Ren'Py script not enabled. Not jumping.
+Resetting cache.
+Bootstrap to the start of init.init took 525.55s
+Early init took 0.00s
+Loader init took 0.01s
+Loading error handling took 0.02s
+Loading script took 0.21s
+Loading save slot metadata. took 0.03s
+Loading persistent took 0.00s
+Faled to initialize steam: OSError("dlopen(/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib, 0x0006): tried: '/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file), '/Applications/Ren'Py/renpy.app/Contents/MacOS/libsteam_api.dylib' (no such file)")
+Running init code took 0.04s
+Loading analysis data took 0.01s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to '/Users/atticusyoung/Library/RenPy/backups/game':
+Dump and make backups. took 0.00s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 640'
+Version: b'2.1 INTEL-22.1.29'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1338, 753) drawable=(2676, 1506)
+Maximum texture size: 4096x4096

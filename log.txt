@@ -1,21 +1,64 @@
-Tue Feb 13 13:26:57 2024
+Sat Feb 17 16:38:29 2024
 macOS-10.16-x86_64-i386-64bit
 Ren'Py 8.0.3.22090809
  
 
-Bootstrap to the start of init.init took 0.05s
+Bootstrap to the start of init.init took 0.08s
 Early init took 0.00s
 Loader init took 0.02s
-Loading error handling took 0.04s
-Loading script took 0.18s
-Loading save slot metadata. took 0.04s
+Loading error handling took 0.07s
+Loading script took 0.48s
+Loading save slot metadata. took 0.06s
 Loading persistent took 0.00s
 
-File "game/script/rooms/jackOffice.rpy", line 5: expected statement.
-    Menu:
-        ^
+File "game/script/quests/Jack/jackQuest.rpy", line 25: expected statement.
+    zoom 2.0 yalign 0.1 xalign -0.5 rotate -30
+          ^
 DPI scale factor: 1.000000
-Interface start took 0.37s
+Interface start took 0.45s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 640'
+Version: b'2.1 INTEL-22.1.29'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1338, 753) drawable=(2676, 1506)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 55.43s
+Early init took 0.00s
+Loader init took 0.01s
+Loading error handling took 0.03s
+Loading script took 0.25s
+Loading save slot metadata. took 0.04s
+Loading persistent took 0.00s
+Faled to initialize steam: OSError("dlopen(/Applications/Ren'Py/lib/py3-mac-x86_64/libsteam_api.dylib, 0x0006): tried: '/Applications/Ren'Py/lib/py3-mac-x86_64/libsteam_api.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Applications/Ren'Py/lib/py3-mac-x86_64/libsteam_api.dylib' (no such file), '/Applications/Ren'Py/lib/py3-mac-x86_64/libsteam_api.dylib' (no such file)")
+Running init code took 0.09s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to '/Users/atticusyoung/Library/RenPy/backups/Office-Simulator':
+Dump and make backups. took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.08s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.09s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1440, 900)

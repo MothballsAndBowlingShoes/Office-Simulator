@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script/rooms/jackOffice.rpy", line 5: expected statement.
-    Menu:
-        ^
+File "game/script/quests/Jack/jackQuest.rpy", line 25: expected statement.
+    zoom 2.0 yalign 0.1 xalign -0.5 rotate -30
+          ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Tue Feb 13 13:26:57 2024
+Sat Feb 17 16:38:30 2024
