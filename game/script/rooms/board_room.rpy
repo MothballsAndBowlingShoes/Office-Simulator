@@ -1,1 +1,0 @@
-label board_room:
