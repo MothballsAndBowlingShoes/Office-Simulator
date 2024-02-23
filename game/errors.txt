@@ -2,9 +2,21 @@
 errors listed below, and try again.
 
 
-File "script/quests/Jack/jackQuest.rpy", line 31: ATL statement contains two expressions in a row; is one of them a misspelled property? If not, separate them with pass.
-    zoom 1.0 yalign 0.0 xalign 0.5 rotate 0 ease 1
-                                                  ^
+File "scripts/quests/Jack/jack-quest-intro.rpy", line 57: choice menuitem expects a non-empty block.
+    "I will cummies all over the salad":
+                                        ^
+
+File "scripts/rooms/hallway/hallway.rpy", line 11: Line is indented, but the preceding scene statement statement does not expect a block. Please check this line's indentation.
+    y "What should I do?"
+    ^
+
+File "scripts/rooms/hallway/hallway_vendingMachine.rpy", line 17: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "scripts/rooms/hallway/hallway_vendingMachine.rpy", line 19: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    "Buy something from this mistake of humanties hubris":
+    ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Sat Feb 17 16:51:58 2024
+Wed Feb 21 15:42:57 2024

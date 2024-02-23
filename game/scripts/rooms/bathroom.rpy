@@ -28,10 +28,10 @@ label event_urinals_firecracker:  # Defining a label called 'event_urinals'
             "{b}Boom!!{/b}"
 
             "You do another flip and nail the other urinal!"
-    show jack neutral  # Showing the 'jack_neutral' image
-    "Jack rushes into the bathroom and gazes upon you in horror as you blow up yet another urinal"
-    show jack pointing  # Showing the 'jack_pointing' image
-    j "Get.{w} In.{w} My.{w} Office.{w} Now.{w}"
+        show jack neutral  # Showing the 'jack_neutral' image
+        "Jack rushes into the bathroom and gazes upon you in horror as you blow up yet another urinal"
+        show jack pointing  # Showing the 'jack_pointing' image
+        j "Get.{w} In.{w} My.{w} Office.{w} Now.{w}"
 
 image darken = "#00000088"  # Declaring an image variable with a color value
 

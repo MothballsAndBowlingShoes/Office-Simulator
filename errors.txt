@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script/quests/Jack/jackQuest.rpy", line 25: expected statement.
-    zoom 2.0 yalign 0.1 xalign -0.5 rotate -30
-          ^
+File "game/scripts/rooms/hallway/hallway_vendingMachine.rpy", line 22: expected statement.
+    h    return
+         ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Sat Feb 17 16:38:30 2024
+Wed Feb 21 15:45:14 2024
