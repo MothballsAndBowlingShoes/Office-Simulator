@@ -8,15 +8,22 @@
 
 # MARK: hallway_vendingMachine entry point
 label hallway_vendingMachine:
-    n "You approach the Vending Machine."
-    n "It's LED screen flickers too life with a hypnotic whirr"
+
+    "You approach the Vending Machine."
+    "Its LED screen flickers to life with a hypnotic whirr."
+
+    # Fade to black before showing vending machine image
     show darken with dissolve
     show vending_machine
+
     v "Mmmmmm, hey there big boy you here to push my {i}buttons{/i}?~"
     v "Or maybe... You'd like something a bit... saucier?"
+
     menu:
         v "Or maybe... You'd like something a bit... saucier?"
-        
-        "Buy something from this mistake of humanty's hubris":
-                jump vending_machine_shop
-    return
+
+        # Option: Buy something
+        "Buy something from this mistake of humanity's hubris":
+            jump vending_machine_shop
+
+return

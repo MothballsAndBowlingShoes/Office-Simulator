@@ -2,21 +2,13 @@
 errors listed below, and try again.
 
 
-File "scripts/quests/Jack/jack-quest-intro.rpy", line 57: choice menuitem expects a non-empty block.
-    "I will cummies all over the salad":
-                                        ^
-
-File "scripts/rooms/hallway/hallway.rpy", line 11: Line is indented, but the preceding scene statement statement does not expect a block. Please check this line's indentation.
-    y "What should I do?"
+File "scripts/rooms/bathroom.rpy", line 31: expected menuitem
+    show jack neutral  
     ^
 
-File "scripts/rooms/hallway/hallway_vendingMachine.rpy", line 17: menu statement expects a non-empty block.
-    menu:
-        ^
-
-File "scripts/rooms/hallway/hallway_vendingMachine.rpy", line 19: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
-    "Buy something from this mistake of humanties hubris":
-    ^
+File "scripts/rooms/lobby/lobby.rpy", line 7: choice menuitem expects a non-empty block.
+    "Talk to the Moose Woman":
+                              ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Wed Feb 21 15:42:57 2024
+Thu Apr  4 11:33:15 2024

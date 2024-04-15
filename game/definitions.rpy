@@ -1,3 +1,11 @@
+#
+# definitions.rpy
+# OfficeSimulator
+#
+# Created by Atticus Young on 2/21/24.
+#
+#
+
 init python:
     #sound font used by characters who have a "low" voice 100hz
     def low_beep(event, **kwargs):

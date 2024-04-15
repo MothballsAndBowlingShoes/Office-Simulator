@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/scripts/rooms/hallway/hallway_vendingMachine.rpy", line 22: expected statement.
-    h    return
-         ^
+File "game/scripts/rooms/bathroom.rpy", line 31: expected menuitem
+    show jack neutral  
+    ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Wed Feb 21 15:45:14 2024
+Thu Apr  4 11:37:00 2024

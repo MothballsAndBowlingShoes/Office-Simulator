@@ -1,3 +1,13 @@
+#
+# script.rpy
+# OfficeSimulator
+#
+# Created by Atticus Young on 2/21/24.
+#
+#
+
+# MARK: script entry point
+
 label start:
     default playerTraits = []
     default inventory = []
@@ -6,20 +16,25 @@ label start:
     scene lobby
     play music "day_1_theme.mp3"
     show jack neutral
-    j "Welcome to your {i}new{/i} unpaid and
-    {i}mostly{/i} illegal job"
+    
+    j "Welcome to your {i}new{/i} unpaid and {i}mostly{/i} illegal job"
+    
     menu:
         "Isn't there a process to these things?":
             j "No"
             j "You're hired"
             j "No questions asked"
+            
         "Wow, the government just sanctions you not paying us?":
             j "You'd be surprised how much you can get away with when you have a nuclear arsenal to rival the country of Turkey"
+            
         "Only Mostly? Can we get that up too Fully?":
-            j "Only if you have experience smuggling frugs over the border in your prison poclet"
+            j "Only if you have experience smuggling drugs over the border in your prison pocket"
+            
     j "I'm the staff manager, Jack"
     j "We have been short on staff ever since everyone else was blinded by Aiden's reflective Irish skin, so it's a miracle you came when you did."
     j "What few Slave labor we have has been consumed by {i}The Hallway{/i}"
+    
     menu:
         "Is your head a microwave?":
             j "That's the first question you choose to ask?"
@@ -33,20 +48,21 @@ label start:
                 "What about your mother?":
                     j "Employee..."
                     j "WE DO NOT TALK ABOUT MY DIRTY COMMUNIST MOTHER, DO YOU UNDERSTAND ME?"
+                    
                     menu:
                         "Yes, sir...":
                             "The man with a microwave for a head shakes it in disappointment"
-                            jump tour_lobby
 
 
         "Wait, blinded?":
             j "Who said anything about blinded?"
             y "You di-"
-            jump tour_lobby
+            
         "Wow! you guys have hallways? Not even the McDonalds i worked at could afford those!":
             j "Yep, We even have complementary rats"
 
-label tour_lobby:
+# MARK: Lobby Tour
+label LobbyTour:
     j "Anyways, let me give you the tour"
     j "This here is the lobby"
     j "This is where we put up our corporate front to throw the unsuspecting federal agents off our trail"
@@ -69,46 +85,58 @@ label tour_lobby:
         "Is she stuck to the desk?":
             j "Honestly? we don't know"
             j "Wherever she goes that desk does too, at this point we're convinvced either it's a comfort thing or God just ran out of a budget and couldn't afford too seperate her sprite from the desk"
+            
         "She's... a moose?":
             show jack pointing
             j "Be nice!"
             j "Without her hard work these past 4 years the company would have crumbled into ashes"
 
-
-label tour_elevator:
+# MARK: Elevator Tour
+label ElevatorTour:
     scene elevator
     with fade
     show jack neutral
+    
     j "This here is the elevator, your local hub for navigating around the building"
     j "{i}Ignore the smell of sweat and dried blood; we still haven't cleaned up after the janitorial department's unsupervised orgy last week{/i}"
     j "Also"
     j "If you hear any creaking coming from the shaft, just stay calm, and remember our company motto:"
+    
     show jack pointing
+    
     j "{i}You're easily expendable, and you will be replaced within the first 10 hours{/i}"
+    
     menu:
         "Wow, don't you think that motto is rather harsh?":
             j "You would be surprised how many people kill themselves thinking they can get out of work"
 
-label tour_offices:
+# MARK: Office Tour
+label OfficesTour:
     scene office
     show jack neutral:
     
     j "This here is your office"
     j "This is where you will work when you aren't meandering about the office like cattle"
     j "You can use your computer to upload pictures to social media or view emails!"
+    
     menu:
         "What if i want to... yknow... actually work?":
             j "Well, i would tell you could do that too but we can't actually afford any office software for you to work"
             j "We already spent most of this year's fiscal budget on the Lobby and Paying Aiden"
-label tour_hallway:
+            
+# MARK: Hallway Tour
+label HallwayTour:
     scene hallway
     show jack neutral
+    
     j "this here is the hallway"
     j "There's not much here outside of the Mangement's Offices, which is where you can find me if you ever need to. No guarantees that i'll be of any help though!"
     j "The bathrooms are also here, but most of the guests feel invited to just piss wherever they like on the floor so we don't expect you to use them either"
     j "We also have the janitor's closet here"
-    j "And last but not least, we have the photocopier Room. Please don't break it. it's not only a vintage relic from the 70s but we also can't afford to replace it"
-label tour_lounge:
+    j "And last but not least, we have the photocopier Room. Please don't break it. it's not only a vintage relic from the 70s, but we also can't afford to replace it"
+
+# MARK: Lounge Tour
+label LoungeTour:
     scene lounge
     show jack neutral
 
@@ -146,25 +174,32 @@ label tour_lounge:
                     "{i}He shudders{/i}"
                     jump tour_boardroom
 
-label tour_boardroom:
+# MARK: Boardroom Tour
+label boardroomTour:
     scene boardroom
     show jack neutral
+    
     j "This is the boardroom!"
     j "Here, we host daily briefings on company updates that range from {i}helpful{/i} to {i}not helpful at all{/i}"
     j "This is also where Aiden sells his goods"
+    
     show jack neutral:
         ease 1 left
     show aiden:
         right
     with moveinright
+    
     a "Bask in my pale skin in its blinding glory"
     j "Try to avoid staring at him for too long..."
     j "{i}It didn't turn out to well for the last guy who did it...{/i}"
     j "Also, anything you hear from police reports about him consuming families is purely rumor and speculation... \n{i}probably{/i}..."
+    
     hide aiden
-    show jack neutral:
+    show jack neutral
+    
     j "He will sell you objects you might need in exchange for our new cryptocurrency"
     j "{size=+20}{b}Office Coin{/b}"
+    
     menu:
         "Do you accept the fiscal monetary standard established in 1792 by this fine nation's founding fathers?":
             show jack neutral:
@@ -176,10 +211,11 @@ label tour_boardroom:
         "Would you accept a Hamburger I have had in my pocket since last thursday?":
             j "I don't even want to know why you keep hamburgers in your pocket... especially for that long..."
 
-
-label tour_warehouse:
+# MARK: Warehouse Tour
+label WarehouseTour:
     scene warehouse
     show jack neutral
+    
     j "This here is the Warehouse"
     j "This is where we keep all our supplies {i}along with all the remains of the Carcassess from Aiden's last rampage{/i}"
     j "If you need something chances are you can get it from here!"
@@ -187,9 +223,11 @@ label tour_warehouse:
     menu:
         "I-interns?":
             j "Yeah. We have a infestation of them after we hired some to fetch coffee for us. The moment they stepped foot in here they scuttled off like roaches and are hiding among the shelves. If you're not careful they will eat you alive"
-label tour_parking_garage:
+            
+# MARK: Parking Garage Tour
+label ParkingGarageTour:
 
-
+# MARK: Post Tour
 label post_tour:
     scene lobby
     show jack neutral
