@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "scripts/rooms/bathroom.rpy", line 31: expected menuitem
-    show jack neutral  
-    ^
-
-File "scripts/rooms/lobby/lobby.rpy", line 7: choice menuitem expects a non-empty block.
-    "Talk to the Moose Woman":
-                              ^
+File "shop.rpy", line 13: vbox expects a non-empty block.
+    vbox:
+         ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Thu Apr  4 11:33:15 2024
+Thu Apr 18 10:37:47 2024

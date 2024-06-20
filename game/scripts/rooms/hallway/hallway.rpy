@@ -11,9 +11,12 @@ label hallway:
     y "What should I do?"
     menu:
         "Management's office":
-            jump mg
+            jump management
+            
         "Go farther down the hallway":
             jump never_ending_hallway_event_manager
+            
         "Use the vending machine":
             jump hallway_vendingMachine
+            
     return

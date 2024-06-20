@@ -1,38 +1,21 @@
-Thu Apr  4 11:42:38 2024
+Thu Apr 18 10:38:05 2024
 macOS-10.16-x86_64-i386-64bit
 Ren'Py 8.0.3.22090809
  
 
-Bootstrap to the start of init.init took 0.06s
+Bootstrap to the start of init.init took 0.08s
 Early init took 0.00s
-Loader init took 0.01s
-Loading error handling took 0.03s
-Loading script took 0.34s
-Loading save slot metadata. took 0.04s
+Loader init took 0.02s
+Loading error handling took 0.06s
+Loading script took 0.28s
+Loading save slot metadata. took 0.10s
 Loading persistent took 0.00s
-Faled to initialize steam: OSError("dlopen(/Applications/Ren'Py/lib/py3-mac-x86_64/libsteam_api.dylib, 0x0006): tried: '/Applications/Ren'Py/lib/py3-mac-x86_64/libsteam_api.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Applications/Ren'Py/lib/py3-mac-x86_64/libsteam_api.dylib' (no such file), '/Applications/Ren'Py/lib/py3-mac-x86_64/libsteam_api.dylib' (no such file)")
-Running init code took 0.07s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Dump and make backups. took 0.05s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.03s
+
+File "game/shop.rpy", line 13: vbox expects a non-empty block.
+    vbox:
+         ^
 DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.03s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.35s
+Interface start took 0.71s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1440, 900)
@@ -44,60 +27,173 @@ Version: b'2.1 INTEL-22.1.29'
 Display Info: None
 Screen sizes: virtual=(1280, 720) physical=(1338, 753) drawable=(2676, 1506)
 Maximum texture size: 4096x4096
-
-Full traceback:
-  File "game/scripts/rooms/hallway/hallway_vendingMachine.rpyc", line 11, in script
-  File "/Applications/Ren'Py/renpy/ast.py", line 881, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "/Applications/Ren'Py/renpy/ast.py", line 774, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who)
-Exception: Sayer 'n' is not defined.
-
-While running game code:
-Exception: Sayer 'n' is not defined.
-
-Full traceback:
-  File "game/scripts/rooms/hallway/hallway_vendingMachine.rpyc", line 11, in script
-  File "/Applications/Ren'Py/renpy/ast.py", line 881, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "/Applications/Ren'Py/renpy/ast.py", line 774, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who)
-Exception: Sayer 'n' is not defined.
-
-While running game code:
-Exception: Sayer 'n' is not defined.
 Resetting cache.
-Bootstrap to the start of init.init took 76.64s
+Bootstrap to the start of init.init took 10.72s
 Early init took 0.00s
-Loader init took 0.01s
-Loading error handling took 0.03s
-Loading script took 0.22s
-Loading save slot metadata. took 0.04s
+Loader init took 0.02s
+Loading error handling took 0.04s
+Loading script took 0.34s
+Loading save slot metadata. took 0.07s
 Loading persistent took 0.00s
 Faled to initialize steam: OSError("dlopen(/Applications/Ren'Py/lib/py3-mac-x86_64/libsteam_api.dylib, 0x0006): tried: '/Applications/Ren'Py/lib/py3-mac-x86_64/libsteam_api.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Applications/Ren'Py/lib/py3-mac-x86_64/libsteam_api.dylib' (no such file), '/Applications/Ren'Py/lib/py3-mac-x86_64/libsteam_api.dylib' (no such file)")
-Running init code took 0.03s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
+Running init code took 0.07s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.01s
 Index archives took 0.00s
 Backing up script files to '/Users/atticusyoung/Library/RenPy/backups/Office-Simulator':
-Dump and make backups. took 0.08s
+Dump and make backups. took 0.10s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc. took 0.04s
+Initial gc. took 0.02s
 DPI scale factor: 1.000000
 Creating interface object took 0.00s
 Cleaning stores took 0.00s
-Init translation took 0.05s
-Build styles took 0.00s
+Init translation took 0.06s
+Build styles took 0.01s
 Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.07s
-Save pyanalysis. took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.19s
+Save pyanalysis. took 0.02s
 Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.07s
+Interface start took 0.09s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 640'
+Version: b'2.1 INTEL-22.1.29'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1338, 753) drawable=(2676, 1506)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 63.39s
+Early init took 0.00s
+Loader init took 0.03s
+Loading error handling took 0.02s
+Loading script took 0.36s
+Loading save slot metadata. took 0.05s
+Loading persistent took 0.00s
+
+File "game/scripts/rooms/hallway/hallway_vendingMachine.rpy", line 27: expected statement.
+    shop()
+          ^
+DPI scale factor: 1.000000
+Interface start took 0.12s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 640'
+Version: b'2.1 INTEL-22.1.29'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1338, 753) drawable=(2676, 1506)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 64.25s
+Early init took 0.00s
+Loader init took 0.01s
+Loading error handling took 0.02s
+Loading script took 0.13s
+Loading save slot metadata. took 0.03s
+Loading persistent took 0.00s
+
+File "game/scripts/rooms/hallway/hallway_vendingMachine.rpy", line 27: expected statement.
+    shop()
+          ^
+DPI scale factor: 1.000000
+Interface start took 0.12s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 640'
+Version: b'2.1 INTEL-22.1.29'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1338, 753) drawable=(2676, 1506)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 121.77s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.04s
+Loading script took 0.36s
+Loading save slot metadata. took 0.08s
+Loading persistent took 0.00s
+Faled to initialize steam: OSError("dlopen(/Applications/Ren'Py/lib/py3-mac-x86_64/libsteam_api.dylib, 0x0006): tried: '/Applications/Ren'Py/lib/py3-mac-x86_64/libsteam_api.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Applications/Ren'Py/lib/py3-mac-x86_64/libsteam_api.dylib' (no such file), '/Applications/Ren'Py/lib/py3-mac-x86_64/libsteam_api.dylib' (no such file)")
+Running init code took 0.17s
+Loading analysis data took 0.03s
+Analyze and compile ATL took 0.01s
+Index archives took 0.00s
+Backing up script files to '/Users/atticusyoung/Library/RenPy/backups/Office-Simulator':
+Dump and make backups. took 0.26s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.10s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.13s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.11s
+Save screen analysis took 0.03s
+Prepare screens took 0.20s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.24s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1440, 900)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel Inc.'"
+Renderer: b'Intel(R) Iris(TM) Plus Graphics 640'
+Version: b'2.1 INTEL-22.1.29'
+Display Info: None
+Screen sizes: virtual=(1280, 720) physical=(1338, 753) drawable=(2676, 1506)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init took 145.89s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.03s
+Loading script took 0.36s
+Loading save slot metadata. took 0.07s
+Loading persistent took 0.00s
+Faled to initialize steam: OSError("dlopen(/Applications/Ren'Py/lib/py3-mac-x86_64/libsteam_api.dylib, 0x0006): tried: '/Applications/Ren'Py/lib/py3-mac-x86_64/libsteam_api.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Applications/Ren'Py/lib/py3-mac-x86_64/libsteam_api.dylib' (no such file), '/Applications/Ren'Py/lib/py3-mac-x86_64/libsteam_api.dylib' (no such file)")
+Running init code took 0.18s
+Loading analysis data took 0.02s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Dump and make backups. took 0.25s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.14s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.16s
+Build styles took 0.00s
+Load screen analysis took 0.06s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.21s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.15s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1440, 900)
@@ -110,11 +206,22 @@ Display Info: None
 Screen sizes: virtual=(1280, 720) physical=(1338, 753) drawable=(2676, 1506)
 Maximum texture size: 4096x4096
 Traceback (most recent call last):
-  File "renpy/common/00console.rpy", line 705, in run
-    result = renpy.python.py_eval(code)
-  File "/Applications/Ren'Py/renpy/python.py", line 1092, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "/Applications/Ren'Py/renpy/python.py", line 1085, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "<none>", line 1, in <module>
-NameError: name 'hideInterface' is not defined
+  File "renpy/common/00console.rpy", line 681, in run
+    he.result = command_fn(l)
+  File "renpy/common/00console.rpy", line 982, in jump
+    raise Exception("Ren'Py script not enabled. Not jumping.")
+Exception: Ren'Py script not enabled. Not jumping.
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.04s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.03s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s

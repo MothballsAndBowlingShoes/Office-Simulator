@@ -24,6 +24,9 @@ label hallway_vendingMachine:
 
         # Option: Buy something
         "Buy something from this mistake of humanity's hubris":
-            jump vending_machine_shop
+            menu:
+                v "What would you like handsome?"
+                
+                "British Tea":
 
 return
