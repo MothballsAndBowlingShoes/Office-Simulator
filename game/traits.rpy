@@ -1,5 +1,0 @@
-$ rabies = trait("Rabies", false)
-$ dontTouchPlayer = trait("Nobody wants to touch me", false)
-$ frenchman = trait("French", false)
-$ catGirl = trait("CatGirl", false)
-$ human = trait("Human", false)

@@ -1,1 +1,0 @@
-$ hamburger = item("Hamburger", 50)
