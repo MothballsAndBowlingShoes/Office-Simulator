@@ -1,19 +1,24 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-Exception: Sayer 'n' is not defined.
+  File "game/scripts/menus/shops.rpy", line 49, in script
+    menu shop:
+TypeError: %d format: a number is required, not str
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/scripts/rooms/hallway/hallway_vendingMachine.rpyc", line 11, in script
-  File "/Applications/Ren'Py/renpy/ast.py", line 881, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "/Applications/Ren'Py/renpy/ast.py", line 774, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who)
-Exception: Sayer 'n' is not defined.
+  File "game/scripts/menus/shops.rpy", line 49, in script
+    menu shop:
+  File "/Applications/Ren'Py/renpy/ast.py", line 1903, in execute
+    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
+  File "/Applications/Ren'Py/renpy/exports.py", line 975, in menu
+    label = substitute(label)
+  File "/Applications/Ren'Py/renpy/exports.py", line 938, in substitute
+    return s % tag_quoting_dict
+TypeError: %d format: a number is required, not str
 
 macOS-10.16-x86_64-i386-64bit x86_64
 Ren'Py 8.0.3.22090809
 Office Simulator 2025 Dev Version
-Thu Apr  4 11:43:52 2024
+Wed Jul 10 20:41:42 2024

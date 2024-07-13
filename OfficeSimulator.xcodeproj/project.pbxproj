@@ -12,12 +12,14 @@
 		DD933C902B1EF5FE006A01DB /* old script.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "old script.txt"; sourceTree = "<group>"; };
 		DD933C912B1EF5FF006A01DB /* credits.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = credits.txt; sourceTree = "<group>"; };
 		DD933C922B1EF5FF006A01DB /* project.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = project.json; sourceTree = "<group>"; };
+		DDE31AEA2C3F7B2000ECD340 /* shops.rpy */ = {isa = PBXFileReference; lastKnownFileType = text; name = shops.rpy; path = game/scripts/menus/shops.rpy; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		DD933C7B2B1EF30E006A01DB = {
 			isa = PBXGroup;
 			children = (
+				DDE31AEA2C3F7B2000ECD340 /* shops.rpy */,
 				DD933C912B1EF5FF006A01DB /* credits.txt */,
 				DD933C8F2B1EF5FE006A01DB /* game */,
 				DD933C902B1EF5FE006A01DB /* old script.txt */,

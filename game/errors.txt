@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "shop.rpy", line 13: vbox expects a non-empty block.
-    vbox:
-         ^
+File "scripts/rooms/hallway/hallway.rpy", line 24: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "Go somewhere else."
+                        ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Thu Apr 18 10:37:47 2024
+Sat Jul 13 01:29:44 2024

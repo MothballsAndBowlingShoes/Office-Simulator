@@ -12,7 +12,7 @@ $ shop_inventory = {
 $ money = init_money
 
 # Shop interface
-label shop:
+label aiden_shop_old:
     $ selected_item = None
     screen shop():
         frame:
