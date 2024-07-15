@@ -109,7 +109,7 @@ screen say(who, what):
                 text who id "who"
 
         text what id "what"
-
+    use quick_menu
 
     ## If there's a side image, display it above the text. Do not display on the
     ## phone variant - there's no room.
@@ -262,12 +262,13 @@ screen quick_menu():
             textbutton _("{u}Q{/u}.Save") action QuickSave()
             textbutton _("{u}Q{/u}.Load") action QuickLoad()
             textbutton _("{u}P{/u}refs") action ShowMenu('preferences')
+            textbutton _("{u}I{/u}nventory") action Show("playerInventory")
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
 ## the player has not explicitly hidden the interface.
-init python:
-    config.overlay_screens.append("quick_menu")
+#init python:
+    #config.overlay_screens.append("quick_menu")
 
 default quick_menu = True
 
@@ -1514,3 +1515,51 @@ style slider_pref_vbox:
 style slider_pref_slider:
     variant "small"
     xsize 600
+
+## Inventory ##################################################################
+##
+## This screen is used for the player inventory
+##
+##
+default currentDescription = ""
+
+screen playerInventory():
+    modal True
+    python:
+        quick_menu = False
+
+    window:
+        background Frame("gui/inventoryWindow.png", 100, 20, 5, 20, False)
+        xsize 720
+        ysize 540
+        xalign 0.5
+        yalign 0.5
+        vbox:
+            yalign 0.8
+            textbutton "X" action SetVariable("quick_menu", True), Hide("playerInventory"):
+                yoffset 15
+                text_size 12
+                text_color "#ffffff"
+
+            hbox:
+                xsize 720
+                ysize 540
+                xalign 0.5
+                viewport:
+                    area(0.01, 0.04, 200, 510)
+                    scrollbars "vertical"
+                    mousewheel True
+                    draggable True
+
+                    xfill True
+                    for i in inventory:
+                        vbox:
+                            textbutton i.name action SetVariable("currentDescription", i.description)
+
+                viewport:
+                    area(0.01, 0.04, 507, 510)
+                    scrollbars "vertical"
+                    mousewheel True
+                    draggable True
+
+                    text currentDescription

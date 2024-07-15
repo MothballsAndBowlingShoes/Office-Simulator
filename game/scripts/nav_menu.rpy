@@ -7,5 +7,16 @@
 # 
 
 # MARK: nav_menu entry point
-label nav_menu:
-    return
+#style nav_button:
+    
+screen nav_menu(lst):
+    style_prefix "choice"
+    vbox:
+        for i in lst:
+            textbutton i:
+                if i=="Nevermind":
+                    action Return()
+                else:
+                    action Jump(i.lower())
+
+

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/scripts/rooms/hallway/hallway.rpy", line 15: expected ':' not found.
-    label hallway_menu
-                      ^
+File "game/screens.rpy", line 1542: 'size' is not a keyword argument or valid child for the textbutton statement.
+    size 12
+        ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Sat Jul 13 01:33:05 2024
+Sun Jul 14 22:42:42 2024

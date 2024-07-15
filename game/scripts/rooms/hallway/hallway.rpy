@@ -6,41 +6,35 @@
 #
 #
 
-label hallway:
-    scene hallway
-    play music "music/hallway_ambience.mp3"
+default hallwayRooms = ["Boardroom", "Management", "Offices", "Elevator", "Nevermind"]
     
-    
-
-label hallway_menu:
+label hallwayMenu:
     y "What should I do?"
-    
-    menu:
-        y "What should I do?"
-        "Management's office":
-            jump management
-            
+    menu:   
         "Go farther down the hallway.":
             jump never_ending_hallway_event_manager
             
         "Use the vending machine.":
-            jump hallway_vendingMachine
+            jump hallwayVendingMachine
         
         "Go somewhere else.":
-            jump hallway_navigation
-            
-    return
+            call screen nav_menu(hallwayRooms)
+
+label hallway:
+    scene hallway
+    play music "music/hallway_ambience.mp3"
+    jump hallwayMenu
 
 #
-# hallway_vendingMachine
+# hallwayVendingMachine
 # OfficeSimulator
 #
 # Created by Atticus Young on 2/21/24.
 #
 #
 
-# MARK: hallway_vendingMachine entry point
-label hallway_vendingMachine:
+# MARK: hallwayVendingMachine entry point
+label hallwayVendingMachine:
     
     # Fade to black before showing vending machine image
     show darken with dissolve
@@ -54,7 +48,7 @@ label hallway_vendingMachine:
     v "Mmmmmm, hey there big boy you here to push my {i}buttons{/i}?~"
     v "Or maybe... You'd like something a bit... saucier?"
 
-label hallway_vendingMachine_Menu:
+label hallwayVendingMachineMenu:
     menu:
         v "Or maybe... You'd like something a bit... saucier?"
 
@@ -65,35 +59,5 @@ label hallway_vendingMachine_Menu:
         
         "Leave while your rectum is still unpenetrated by this steel rectangular prism.":
             jump hallway
-
-return
-
-#
-# hallway_navigation
-# OfficeSimulator
-#
-# Created by Atticus Young on 2/21/24.
-#
-#
-
-label hallway_navigation:
-    "Where should I go?"
-    menu:
-        "Where should I go?"
-        
-        "Boardroom":
-            jump boardroom
-            
-        "Management":
-            jump management
-            
-        "Offices":
-            jump offices
-            
-        "Elevator":
-            jump elevator
-            
-        "Nevermind":
-            jump hallway_menu
 
 return
