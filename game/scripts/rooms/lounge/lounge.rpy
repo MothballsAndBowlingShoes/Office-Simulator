@@ -3,7 +3,7 @@ define i = Character("Aiden")
 label lounge:
     play music dayOneTheme
 
-    scene lounge
+    scene bg lounge
     menu:
 
         "What should I do?"

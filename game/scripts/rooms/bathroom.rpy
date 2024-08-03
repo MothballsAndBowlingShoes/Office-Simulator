@@ -6,26 +6,44 @@
 #
 #
 
-default bathroomRooms = ["Lobby", "Nevermind"]
 
-label bathroom:  # Defining a label called 'bathroom'
-    scene bathroom  # Displaying the bathroom scene
+################################################################################
+## Variables
+################################################################################
+
+default bathroomRooms = ["Lobby", "Nevermind"]
+image darken = "#00000088"
+
+################################################################################
+## Labels
+################################################################################
+
+## Bathroom ####################################################################
+##
+## The main handler for the Bathroom scene when they player enters.
+
+label bathroom:
+    scene bg bathroom
 
     "You enter the dank and moldy bathroom"
     menu:
         "What do you want to do?"
 
         "Throw Cherry bombs at the urinals":
-            jump event_urinals_firecracker  # Jumping to the label 'event_urinals' if selected
+            jump eventUrinalsFirecrackers
 
-        "Talk to the man":
+        "Talk to the ape":
             jump shop
         
         "Leave":
             call screen nav_menu(bathroomRooms)
 
+## eventUrinalsFirecrackers #####################################################
+##
+## The main handler for the event where the player chooses to throw fire crackers
+## at the urinals.
 
-label event_urinals_firecracker:  # Defining a label called 'event_urinals'
+label eventUrinalsFirecrackers:  # Defining a label called 'event_urinals'
     "Despite the risk of getting fired, you procure a set of fire crackers from your pockets"
     menu:
         "{i}Do a sick flip!{/i}":
@@ -46,9 +64,12 @@ label event_urinals_firecracker:  # Defining a label called 'event_urinals'
     show jack pointing  # Showing the 'jack_pointing' image
     j "Get.{w} In.{w} My.{w} Office.{w} Now.{w}"
 
-image darken = "#00000088"  # Declaring an image variable with a color value
+## bonziIntro ##################################################################
+##
+## The main handler for first meeting bonzi. This first plays upon entering the
+## bathroom.
 
-label bonzi_intro:  # Defining a label called 'bonzi_intro'
+label bonziIntro:  # Defining a label called 'bonzi_intro'
     show darken with dissolve  # Showing the 'darken' image with dissolve effect
     show bonzi neutral  # Showing the 'bonzi_neutral' image
     # Playing an audio file
@@ -97,7 +118,11 @@ label bonzi_intro:  # Defining a label called 'bonzi_intro'
 
                             jump bathroom  # Jumping back to the 'bathroom' label
 
-label bonzi_quest0: # The player Helps Bonzi by collecting various unconventional items needed for the escape plan. These include items like a rubber Dildo belonging to King George the VII, a feather hat, a tub of vegan glitter, and a live chicken
+## bonziQuest ###################################################################
+##
+## REPLACE THE FUCKING MONKEY
+
+label bonziQuest: # The player Helps Bonzi by collecting various unconventional items needed for the escape plan. These include items like a rubber Dildo belonging to King George the VII, a feather hat, a tub of vegan glitter, and a live chicken
     b "Ah, welcome back employee"
     b "I see you gathered the items I requested"
     b ""

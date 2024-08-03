@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "screens.rpy", line 112: The fancytext statement is not a valid child of the fancytext statement.
-    fancytext what id "what" fancytext what id "what" slow_effect slow_effect slow_effect_delay slow_effect_delay always_effect always_effect
-                                      ^
+File "scripts/rooms/janitorCloset.rpy", line 42: expected statement.
+    def _janitorClosetMenu():
+                          ^
 
 Ren'Py Version: Ren'Py 8.2.3.24061702
-Fri Aug  2 19:30:20 2024
+Sat Aug  3 16:13:27 2024

@@ -1,51 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/scripts/rooms/lobby/lobby.rpy", line 12, in script
-    "What do you want to do?"
-  File "renpy/common/000window.rpy", line 126, in _window_auto_callback
-    _window_show(auto=True)
-  File "renpy/common/000window.rpy", line 70, in _window_show
-    renpy.with_statement(trans)
-OSError: Couldn't find file 'music/theme_day1.mp3'.
+  File "game/scripts/rooms/elevator.rpy", line 44, in script
+    $ moveElevator(2)
+  File "game/scripts/rooms/elevator.rpy", line 44, in <module>
+    $ moveElevator(2)
+  File "game/scripts/rooms/elevator.rpy", line 25, in moveElevator
+    with_statement(Shake((0, 0, 0, 0), 2.875, dist=5), True)
+TypeError: '_Feature' object is not callable
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/scripts/rooms/lobby/lobby.rpy", line 12, in script
-    "What do you want to do?"
-  File "/Applications/Ren'Py/renpy/ast.py", line 585, in execute
-    statement_name("say")
-  File "/Applications/Ren'Py/renpy/ast.py", line 52, in statement_name
-    i(name)
-  File "renpy/common/000window.rpy", line 126, in _window_auto_callback
-    _window_show(auto=True)
-  File "renpy/common/000window.rpy", line 70, in _window_show
-    renpy.with_statement(trans)
-  File "/Applications/Ren'Py/renpy/exports.py", line 1782, in with_statement
-    return renpy.game.interface.do_with(trans, paired, clear=clear)
-  File "/Applications/Ren'Py/renpy/display/core.py", line 1549, in do_with
-    return self.interact(trans_pause=True,
-  File "/Applications/Ren'Py/renpy/display/core.py", line 2166, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "/Applications/Ren'Py/renpy/display/core.py", line 3026, in interact_core
-    renpy.audio.audio.periodic()
-  File "/Applications/Ren'Py/renpy/audio/audio.py", line 1199, in periodic
-    raise_(exc[0], exc[1], exc[2])
-  File "lib/python3.9/future/utils/__init__.py", line 444, in raise_
-  File "/Applications/Ren'Py/renpy/audio/audio.py", line 1177, in periodic_thread_main
-    periodic_pass()
-  File "/Applications/Ren'Py/renpy/audio/audio.py", line 1119, in periodic_pass
-    c.periodic()
-  File "/Applications/Ren'Py/renpy/audio/audio.py", line 528, in periodic
-    topf = load(filename)
-  File "/Applications/Ren'Py/renpy/audio/audio.py", line 72, in load
-    rv = renpy.loader.load(fn, directory="audio")
-  File "/Applications/Ren'Py/renpy/loader.py", line 672, in load
-    raise IOError("Couldn't find file '%s'." % name)
-OSError: Couldn't find file 'music/theme_day1.mp3'.
+  File "game/scripts/rooms/elevator.rpy", line 44, in script
+    $ moveElevator(2)
+  File "/Applications/Ren'Py/renpy/ast.py", line 823, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Applications/Ren'Py/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/scripts/rooms/elevator.rpy", line 44, in <module>
+    $ moveElevator(2)
+  File "game/scripts/rooms/elevator.rpy", line 25, in moveElevator
+    with_statement(Shake((0, 0, 0, 0), 2.875, dist=5), True)
+TypeError: '_Feature' object is not callable
 
 macOS-14.5-arm64-arm-64bit arm64
 Ren'Py 8.2.3.24061702
 Office Simulator 2025 InfDev
-Sat Aug  3 01:24:04 2024
+Sat Aug  3 16:26:55 2024

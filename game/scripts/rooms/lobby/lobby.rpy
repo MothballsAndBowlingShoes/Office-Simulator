@@ -17,7 +17,7 @@ menu:
         call screen nav_menu(lobbyRooms)
 
 label lobby:
-    scene lobby
+    scene bg lobby
     play music dayOneTheme
     jump lobbyMenu
 

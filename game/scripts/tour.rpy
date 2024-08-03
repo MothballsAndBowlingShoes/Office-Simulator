@@ -10,7 +10,7 @@ label tour:
     default playerTraits = []
     default officeCoinAmount = 0
     
-    scene lobby
+    scene bg lobby
     play music dayOneTheme
     show jack neutral
     
@@ -90,7 +90,7 @@ label tour:
             j "Without her hard work these past 4 years the company would have crumbled into ashes"
 
 # MARK: Elevator Tour
-    scene elevator
+    scene bg elevator
     with fade
     show jack neutral
     
@@ -130,7 +130,7 @@ label tour:
     j "And last but not least, this is where we keep the photocopier. Please don't break it. it's not only a vintage relic from the 70s, but we also can't afford to replace it"
 
 # MARK: Lounge Tour
-    scene lounge
+    scene bg lounge
     show jack neutral
 
     j "This here is the employee lounge"
