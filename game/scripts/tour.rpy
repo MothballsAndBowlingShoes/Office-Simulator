@@ -203,7 +203,7 @@ label tour:
             j "I don't even want to know why you keep hamburgers in your pocket... especially for that long..."
 
 # MARK: Warehouse Tour
-    scene warehouse
+    scene bg warehouse
     show jack neutral
     
     j "This here is the Warehouse"
@@ -217,7 +217,7 @@ label tour:
 # MARK: Parking Garage Tour
 
 # MARK: Post Tour
-    scene lobby
+    scene bg lobby
     show jack neutral
     j "Anyways, I believe that concludes our tour"
     j "Before you start working here, employee, I have to ask you a few questions"

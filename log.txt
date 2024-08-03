@@ -1,29 +1,193 @@
-2024-08-03 09:08:32 UTC
+2024-08-03 22:25:10 UTC
 macOS-14.5-arm64-arm-64bit
 Ren'Py 8.2.3.24061702
 
 Early init took 0.03s
-Loading error handling took 0.01s
-Loading script took 0.05s
-Loading save slot metadata took 0.02s
+Loading error handling took 0.02s
+Loading script took 0.06s
+Loading save slot metadata took 0.03s
 Loading persistent took 0.00s
-Running init code took 0.02s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.01s
-Index archives took 0.00s
-Dump and make backups took 0.02s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.02s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.01s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.03s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
+
+File "game/tour.rpy", line 18: Line with id tour_23941cf3 appears twice. The other line is game/scripts/tour.rpy:17
+
+File "game/tour.rpy", line 22: Line with id tour_d6c8a8ee appears twice. The other line is game/scripts/tour.rpy:21
+
+File "game/tour.rpy", line 23: Line with id tour_fce47584 appears twice. The other line is game/scripts/tour.rpy:22
+
+File "game/tour.rpy", line 24: Line with id tour_7bb83b9f appears twice. The other line is game/scripts/tour.rpy:23
+
+File "game/tour.rpy", line 27: Line with id tour_f36f80e2 appears twice. The other line is game/scripts/tour.rpy:26
+
+File "game/tour.rpy", line 30: Line with id tour_c6d1fa3e appears twice. The other line is game/scripts/tour.rpy:29
+
+File "game/tour.rpy", line 32: Line with id tour_d2bd8c96 appears twice. The other line is game/scripts/tour.rpy:32
+
+File "game/tour.rpy", line 33: Line with id tour_6e97d331 appears twice. The other line is game/scripts/tour.rpy:33
+
+File "game/tour.rpy", line 34: Line with id tour_37257fc0 appears twice. The other line is game/scripts/tour.rpy:34
+
+File "game/tour.rpy", line 38: Line with id tour_9a737904 appears twice. The other line is game/scripts/tour.rpy:38
+
+File "game/tour.rpy", line 39: Line with id tour_e02ced56 appears twice. The other line is game/scripts/tour.rpy:39
+
+File "game/tour.rpy", line 40: Line with id tour_d486005f appears twice. The other line is game/scripts/tour.rpy:40
+
+File "game/tour.rpy", line 41: Line with id tour_648426e4 appears twice. The other line is game/scripts/tour.rpy:41
+
+File "game/tour.rpy", line 42: Line with id tour_ca1d9bc4 appears twice. The other line is game/scripts/tour.rpy:42
+
+File "game/tour.rpy", line 43: Line with id tour_157259ef appears twice. The other line is game/scripts/tour.rpy:43
+
+File "game/tour.rpy", line 47: Line with id tour_5207bb12 appears twice. The other line is game/scripts/tour.rpy:47
+
+File "game/tour.rpy", line 48: Line with id tour_ac6ed14a appears twice. The other line is game/scripts/tour.rpy:48
+
+File "game/tour.rpy", line 52: Line with id tour_49e3a8f6 appears twice. The other line is game/scripts/tour.rpy:52
+
+File "game/tour.rpy", line 56: Line with id tour_156a7f2b appears twice. The other line is game/scripts/tour.rpy:56
+
+File "game/tour.rpy", line 57: Line with id tour_d88d020f appears twice. The other line is game/scripts/tour.rpy:57
+
+File "game/tour.rpy", line 60: Line with id tour_e898755e appears twice. The other line is game/scripts/tour.rpy:60
+
+File "game/tour.rpy", line 63: Line with id tour_c663edbc appears twice. The other line is game/scripts/tour.rpy:63
+
+File "game/tour.rpy", line 64: Line with id tour_9ccdcf38 appears twice. The other line is game/scripts/tour.rpy:64
+
+File "game/tour.rpy", line 65: Line with id tour_04cdfb97 appears twice. The other line is game/scripts/tour.rpy:65
+
+File "game/tour.rpy", line 66: Line with id tour_c8a5f08b appears twice. The other line is game/scripts/tour.rpy:66
+
+File "game/tour.rpy", line 67: Line with id tour_ec01d8cf appears twice. The other line is game/scripts/tour.rpy:68
+
+File "game/tour.rpy", line 69: Line with id tour_575d1859 appears twice. The other line is game/scripts/tour.rpy:70
+
+File "game/tour.rpy", line 78: Line with id tour_18d96c89 appears twice. The other line is game/scripts/tour.rpy:79
+
+File "game/tour.rpy", line 79: Line with id tour_bce47c12 appears twice. The other line is game/scripts/tour.rpy:80
+
+File "game/tour.rpy", line 83: Line with id tour_c0b3cfc4 appears twice. The other line is game/scripts/tour.rpy:84
+
+File "game/tour.rpy", line 84: Line with id tour_0c9ff87b appears twice. The other line is game/scripts/tour.rpy:85
+
+File "game/tour.rpy", line 88: Line with id tour_7038c2e8 appears twice. The other line is game/scripts/tour.rpy:89
+
+File "game/tour.rpy", line 89: Line with id tour_18f725e8 appears twice. The other line is game/scripts/tour.rpy:90
+
+File "game/tour.rpy", line 96: Line with id tour_dec175ee appears twice. The other line is game/scripts/tour.rpy:97
+
+File "game/tour.rpy", line 97: Line with id tour_8bddf237 appears twice. The other line is game/scripts/tour.rpy:98
+
+File "game/tour.rpy", line 98: Line with id tour_4e9140e0 appears twice. The other line is game/scripts/tour.rpy:99
+
+File "game/tour.rpy", line 99: Line with id tour_ab71ff77 appears twice. The other line is game/scripts/tour.rpy:100
+
+File "game/tour.rpy", line 103: Line with id tour_5371bf19 appears twice. The other line is game/scripts/tour.rpy:104
+
+File "game/tour.rpy", line 107: Line with id tour_91aeb1fe appears twice. The other line is game/scripts/tour.rpy:108
+
+File "game/tour.rpy", line 113: Line with id tour_b78be397 appears twice. The other line is game/scripts/tour.rpy:114
+
+File "game/tour.rpy", line 114: Line with id tour_5ec7e1f4 appears twice. The other line is game/scripts/tour.rpy:115
+
+File "game/tour.rpy", line 115: Line with id tour_df16efe2 appears twice. The other line is game/scripts/tour.rpy:116
+
+File "game/tour.rpy", line 119: Line with id tour_3f51dff0 appears twice. The other line is game/scripts/tour.rpy:120
+
+File "game/tour.rpy", line 120: Line with id tour_865bb694 appears twice. The other line is game/scripts/tour.rpy:121
+
+File "game/tour.rpy", line 126: Line with id tour_52e75582 appears twice. The other line is game/scripts/tour.rpy:127
+
+File "game/tour.rpy", line 128: Line with id tour_057826e7 appears twice. The other line is game/scripts/tour.rpy:67
+
+File "game/tour.rpy", line 129: Line with id tour_088e0289 appears twice. The other line is game/scripts/tour.rpy:129
+
+File "game/tour.rpy", line 136: Line with id tour_ce5fb21e appears twice. The other line is game/scripts/tour.rpy:136
+
+File "game/tour.rpy", line 137: Line with id tour_068bc203 appears twice. The other line is game/scripts/tour.rpy:137
+
+File "game/tour.rpy", line 138: Line with id tour_87bbe99c appears twice. The other line is game/scripts/tour.rpy:138
+
+File "game/tour.rpy", line 139: Line with id tour_968bc454 appears twice. The other line is game/scripts/tour.rpy:139
+
+File "game/tour.rpy", line 145: Line with id tour_fb97d404 appears twice. The other line is game/scripts/tour.rpy:145
+
+File "game/tour.rpy", line 147: Line with id tour_42f4e7f9 appears twice. The other line is game/scripts/tour.rpy:147
+
+File "game/tour.rpy", line 149: Line with id tour_380f76ff appears twice. The other line is game/scripts/tour.rpy:149
+
+File "game/tour.rpy", line 150: Line with id tour_4fd6d51c appears twice. The other line is game/scripts/tour.rpy:150
+
+File "game/tour.rpy", line 151: Line with id tour_4d2a2514 appears twice. The other line is game/scripts/tour.rpy:151
+
+File "game/tour.rpy", line 153: Line with id tour_7b479605 appears twice. The other line is game/scripts/tour.rpy:153
+
+File "game/tour.rpy", line 156: Line with id tour_00a1d931 appears twice. The other line is game/scripts/tour.rpy:156
+
+File "game/tour.rpy", line 159: Line with id tour_8797317f appears twice. The other line is game/scripts/tour.rpy:159
+
+File "game/tour.rpy", line 164: Line with id tour_99b3a434 appears twice. The other line is game/scripts/tour.rpy:164
+
+File "game/tour.rpy", line 165: Line with id tour_6baba090 appears twice. The other line is game/scripts/tour.rpy:165
+
+File "game/tour.rpy", line 166: Line with id tour_1dc57bf0 appears twice. The other line is game/scripts/tour.rpy:166
+
+File "game/tour.rpy", line 167: Line with id tour_d58ef4fa appears twice. The other line is game/scripts/tour.rpy:167
+
+File "game/tour.rpy", line 174: Line with id tour_8bcacdc4 appears twice. The other line is game/scripts/tour.rpy:173
+
+File "game/tour.rpy", line 175: Line with id tour_fd024340 appears twice. The other line is game/scripts/tour.rpy:174
+
+File "game/tour.rpy", line 176: Line with id tour_65b6413e appears twice. The other line is game/scripts/tour.rpy:175
+
+File "game/tour.rpy", line 184: Line with id tour_8b1b22f2 appears twice. The other line is game/scripts/tour.rpy:183
+
+File "game/tour.rpy", line 185: Line with id tour_869fc8d9 appears twice. The other line is game/scripts/tour.rpy:184
+
+File "game/tour.rpy", line 186: Line with id tour_50714579 appears twice. The other line is game/scripts/tour.rpy:185
+
+File "game/tour.rpy", line 187: Line with id tour_7c3eed9b appears twice. The other line is game/scripts/tour.rpy:186
+
+File "game/tour.rpy", line 192: Line with id tour_f0591570 appears twice. The other line is game/scripts/tour.rpy:191
+
+File "game/tour.rpy", line 193: Line with id tour_aa5dbd55 appears twice. The other line is game/scripts/tour.rpy:192
+
+File "game/tour.rpy", line 199: Line with id tour_f29102a3 appears twice. The other line is game/scripts/tour.rpy:198
+
+File "game/tour.rpy", line 204: Line with id tour_0b982637 appears twice. The other line is game/scripts/tour.rpy:203
+
+File "game/tour.rpy", line 210: Line with id tour_914f423d appears twice. The other line is game/scripts/tour.rpy:209
+
+File "game/tour.rpy", line 211: Line with id tour_a5185b45 appears twice. The other line is game/scripts/tour.rpy:210
+
+File "game/tour.rpy", line 212: Line with id tour_d3ae9206 appears twice. The other line is game/scripts/tour.rpy:211
+
+File "game/tour.rpy", line 213: Line with id tour_ff315cc2 appears twice. The other line is game/scripts/tour.rpy:212
+
+File "game/tour.rpy", line 216: Line with id tour_76f199d4 appears twice. The other line is game/scripts/tour.rpy:215
+
+File "game/tour.rpy", line 223: Line with id tour_9ad9e8aa appears twice. The other line is game/scripts/tour.rpy:222
+
+File "game/tour.rpy", line 224: Line with id tour_6ff343df appears twice. The other line is game/scripts/tour.rpy:223
+
+File "game/tour.rpy", line 233: Line with id tour_b6ed61f8 appears twice. The other line is game/scripts/tour.rpy:232
+
+File "game/tour.rpy", line 234: Line with id tour_ab420600 appears twice. The other line is game/scripts/tour.rpy:233
+
+File "game/tour.rpy", line 237: Line with id tour_049c6ae8 appears twice. The other line is game/scripts/tour.rpy:236
+
+File "game/tour.rpy", line 240: Line with id tour_9ac2e9bf appears twice. The other line is game/scripts/tour.rpy:239
+
+File "game/tour.rpy", line 246: Line with id tour_e55cd2bc appears twice. The other line is game/scripts/tour.rpy:245
+
+File "game/tour.rpy", line 249: Line with id tour_1e44214e appears twice. The other line is game/scripts/tour.rpy:248
+
+File "game/tour.rpy", line 252: Line with id tour_edfbee65 appears twice. The other line is game/scripts/tour.rpy:251
+
+File "game/tour.rpy", line 256: Line with id tour_be8b7e91 appears twice. The other line is game/scripts/tour.rpy:255
+
+File "game/tour.rpy", line 258: Line with id tour_952c848b appears twice. The other line is game/scripts/tour.rpy:257
+
+File "game/tour.rpy", line 260: Line with id tour_72523e30 appears twice. The other line is game/scripts/tour.rpy:259
+
+File "game/tour.rpy", line 262: Line with id tour_e1782957 appears twice. The other line is game/scripts/tour.rpy:261
