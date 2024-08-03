@@ -7,6 +7,7 @@
 
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
+
 RENPY_TOOL=/Applications/Ren'Py/renpy.sh
 BUILD_ACTION=$(SRCROOT)/game lint
 RUN_ACTION=$(SRCROOT)/game

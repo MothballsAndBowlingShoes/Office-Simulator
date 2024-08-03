@@ -32,7 +32,7 @@ label JackIntro:
         "Like on a date? Where we'll go back to their place, then sultrily undress in the candlelight and they will gently stroke my skin and whisper sweet nothings to me. Then they pin me to the bed, moaning my name as we make sweet passionate love to eachother and then they grasp my-":
             show jack neutral:
                 zoom 2.0 yalign 0.1 xalign -0.5 rotate -30
-            play audio "soundClips/sprayBottle.mp3"
+            play audio sprayBottle
             show image "sprayBottle.png"
             j "{b}NO EMPLOYEE{/b}"
             

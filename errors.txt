@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 1542: 'size' is not a keyword argument or valid child for the textbutton statement.
-    size 12
+File "game/screens.rpy", line 182: keyword argument 'xpos' is incompatible with 'xalign'.
+    xpos gui.dialogue_xpos
         ^
 
-Ren'Py Version: Ren'Py 8.0.3.22090809
-Sun Jul 14 22:42:42 2024
+Ren'Py Version: Ren'Py 8.2.3.24061702
+Sat Aug  3 02:04:44 2024

@@ -42,3 +42,17 @@ Photo by <a href="https://unsplash.com/@redaquamedia?utm_content=creditCopyText&
 Elevator By Courtesy of Baron Maddock, CC BY 4.0, https://commons.wikimedia.org/w/index.php?curid=114031389
 
 "Rat Hd (158043393)" by Antoine Taccetti is licensed under CC BY 3.0
+
+ID sprite By Idgod.com - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=114479561
+
+backroom's image:
+    Filename: cc_lvl0.jpg
+    Author: Alfarex on the TS Discord
+    License: CC-BY-SA-3.0
+    Source Link: http://backrooms-wiki.wikidot.com/local--files/level-0/cc_lvl0.jpg
+    Additional Notes: Made in Blender
+
+backrooms sound:
+    60Hz mains hum sound 2 by chungus43A -- https://freesound.org/s/733738/ -- License: Creative Commons 0
+
+Hallway Pictures: Famartin, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons

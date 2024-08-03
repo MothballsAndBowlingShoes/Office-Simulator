@@ -18,7 +18,7 @@ menu:
 
 label lobby:
     scene lobby
-    play music "music/theme_day1.mp3"
+    play music dayOneTheme
     jump lobbyMenu
 
 return

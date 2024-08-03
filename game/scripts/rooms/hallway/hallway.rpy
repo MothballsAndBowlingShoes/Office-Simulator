@@ -7,57 +7,59 @@
 #
 
 default hallwayRooms = ["Boardroom", "Management", "Offices", "Elevator", "Nevermind"]
-    
+
 label hallwayMenu:
-    y "What should I do?"
-    menu:   
+    n "What would you like to do?"
+    menu:
         "Go farther down the hallway.":
-            jump never_ending_hallway_event_manager
-            
-        "Use the vending machine.":
-            jump hallwayVendingMachine
+            call neverEndingHallway
         
+        "Use the vending machine.":
+            call vallory
+        
+        "Go to the Boss's Office":
+            call bossDoor
+            
+        "Go to Jack's Office":
+            call jackOffice
+            
         "Go somewhere else.":
             call screen nav_menu(hallwayRooms)
-
+    return
+    
 label hallway:
-    scene hallway
-    play music "music/hallway_ambience.mp3"
-    jump hallwayMenu
+    scene bg hallway
+    play music backroomsAmbience
+    call hallwayMenu
 
 #
-# hallwayVendingMachine
+# bossDoor
 # OfficeSimulator
 #
-# Created by Atticus Young on 2/21/24.
+# Created by Atticus Young on 8/2/24.
 #
 #
 
-# MARK: hallwayVendingMachine entry point
-label hallwayVendingMachine:
-    
-    # Fade to black before showing vending machine image
-    show darken with dissolve
-    show vending_machine
-    
-    play music "music/vendingMachineTheme.mp3"
-    
-    "You approach the Vending Machine."
-    "Its LED screen flickers to life with a hypnotic whirr."
-
-    v "Mmmmmm, hey there big boy you here to push my {i}buttons{/i}?~"
-    v "Or maybe... You'd like something a bit... saucier?"
-
-label hallwayVendingMachineMenu:
-    menu:
-        v "Or maybe... You'd like something a bit... saucier?"
-
-        # Option: Buy something
-        "Buy something from this mistake of humanity's hubris":
-                v "What would you like handsome?"
-                jump vendingMachineShops
+label bossDoor:
+    scene bg bossdoor with dissolve
+    pause 1
+    scene bg bossdoor with dissolve:
+        zoom 2.0
+        xanchor 0.25
+        yanchor 0.25
         
-        "Leave while your rectum is still unpenetrated by this steel rectangular prism.":
-            jump hallway
+    play audio doorJiggle
+    pause 1
+    n "You try to open the door but it doesn't budge"
 
-return
+label bossDoorOptions:
+    menu:
+        "Try again":
+            play audio doorJiggle
+            pause 1
+            n "You try to open the door again but it doesn't budge"
+            jump bossDoorOptions
+            
+        "Go back.":
+            jump hallway
+    return

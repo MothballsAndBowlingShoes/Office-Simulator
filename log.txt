@@ -1,133 +1,29 @@
-Sun Jul 14 22:46:32 2024
-macOS-10.16-x86_64-i386-64bit
-Ren'Py 8.0.3.22090809
- 
+2024-08-03 09:08:32 UTC
+macOS-14.5-arm64-arm-64bit
+Ren'Py 8.2.3.24061702
 
-Bootstrap to the start of init.init took 0.07s
-Early init took 0.00s
-Loader init took 0.02s
-Loading error handling took 0.08s
-Loading script took 0.53s
-Loading save slot metadata. took 0.05s
+Early init took 0.03s
+Loading error handling took 0.01s
+Loading script took 0.05s
+Loading save slot metadata took 0.02s
 Loading persistent took 0.00s
-Faled to initialize steam: OSError("dlopen(/Applications/Ren'Py/lib/py3-mac-x86_64/libsteam_api.dylib, 0x0006): tried: '/Applications/Ren'Py/lib/py3-mac-x86_64/libsteam_api.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Applications/Ren'Py/lib/py3-mac-x86_64/libsteam_api.dylib' (no such file), '/Applications/Ren'Py/lib/py3-mac-x86_64/libsteam_api.dylib' (no such file)")
-Running init code took 0.09s
-Loading analysis data took 0.04s
+Running init code took 0.02s
+Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
+Reloading save slot metadata took 0.01s
 Index archives took 0.00s
-Backing up script files to '/Users/atticusyoung/Library/RenPy/backups/Office-Simulator':
-Dump and make backups. took 0.09s
+Dump and make backups took 0.02s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc. took 0.02s
+Initial gc took 0.02s
 DPI scale factor: 1.000000
 Creating interface object took 0.00s
 Cleaning stores took 0.00s
-Init translation took 0.03s
+Init translation took 0.02s
 Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.01s
-Save bytecode. took 0.03s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.53s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1440, 900)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Intel Inc.'"
-Renderer: b'Intel(R) Iris(TM) Plus Graphics 640'
-Version: b'2.1 INTEL-22.5.11'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1338, 753) drawable=(2676, 1506)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 136.88s
-Early init took 0.00s
-Loader init took 0.02s
-Loading error handling took 0.04s
-Loading script took 0.51s
-Loading save slot metadata. took 0.04s
-Loading persistent took 0.00s
-Faled to initialize steam: OSError("dlopen(/Applications/Ren'Py/lib/py3-mac-x86_64/libsteam_api.dylib, 0x0006): tried: '/Applications/Ren'Py/lib/py3-mac-x86_64/libsteam_api.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Applications/Ren'Py/lib/py3-mac-x86_64/libsteam_api.dylib' (no such file), '/Applications/Ren'Py/lib/py3-mac-x86_64/libsteam_api.dylib' (no such file)")
-Running init code took 0.04s
-Loading analysis data took 0.02s
-Analyze and compile ATL took 0.00s
-Index archives took 0.00s
-Backing up script files to '/Users/atticusyoung/Library/RenPy/backups/Office-Simulator':
-Dump and make backups. took 0.07s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.03s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.10s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1440, 900)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Intel Inc.'"
-Renderer: b'Intel(R) Iris(TM) Plus Graphics 640'
-Version: b'2.1 INTEL-22.5.11'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1338, 753) drawable=(2676, 1506)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init took 146.43s
-Early init took 0.00s
-Loader init took 0.02s
-Loading error handling took 0.03s
-Loading script took 0.67s
-Loading save slot metadata. took 0.23s
-Loading persistent took 0.00s
-Faled to initialize steam: OSError("dlopen(/Applications/Ren'Py/lib/py3-mac-x86_64/libsteam_api.dylib, 0x0006): tried: '/Applications/Ren'Py/lib/py3-mac-x86_64/libsteam_api.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Applications/Ren'Py/lib/py3-mac-x86_64/libsteam_api.dylib' (no such file), '/Applications/Ren'Py/lib/py3-mac-x86_64/libsteam_api.dylib' (no such file)")
-Running init code took 0.07s
-Loading analysis data took 0.04s
-Analyze and compile ATL took 0.01s
-Index archives took 0.00s
-Backing up script files to '/Users/atticusyoung/Library/RenPy/backups/Office-Simulator':
-Dump and make backups. took 0.15s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.06s
-DPI scale factor: 1.000000
-Creating interface object took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.08s
-Build styles took 0.01s
-Load screen analysis took 0.00s
-Analyze screens took 0.03s
-Save screen analysis took 0.05s
-Prepare screens took 0.11s
-Save pyanalysis. took 0.03s
-Save bytecode. took 0.03s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.15s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1440, 900)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'Intel Inc.'"
-Renderer: b'Intel(R) Iris(TM) Plus Graphics 640'
-Version: b'2.1 INTEL-22.5.11'
-Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1338, 753) drawable=(2676, 1506)
-Maximum texture size: 4096x4096
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.03s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s

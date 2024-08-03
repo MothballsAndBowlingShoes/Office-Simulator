@@ -1,4 +1,4 @@
-﻿################################################################################
+################################################################################
 ## Initialization
 ################################################################################
 
@@ -12,6 +12,7 @@ init offset = -1
 style default:
     properties gui.text_properties()
     language gui.language
+    antialias False
 
 style input:
     properties gui.text_properties("input", accent=True)
@@ -409,7 +410,7 @@ style main_menu_version:
 
 ## Game Menu screen ############################################################
 ##
-## This lays out the basic common structure of a game menu screen. It's called
+## This lays out the basic common structure of a game menu screen. It's screen sayed
 ## with the screen title, and displays the background, title, and navigation.
 ##
 ## The scroll parameter can be None, or one of "viewport" or "vpgrid". When
@@ -1521,45 +1522,72 @@ style slider_pref_slider:
 ## This screen is used for the player inventory
 ##
 ##
-default currentDescription = ""
 
+default currentDescription = ""
+default currentSprite = None
+
+style x_button is vpgrid:
+    xfill False
+
+style x_button_text:
+    xalign 0.5
+    yalign 0.5
+    
+    
 screen playerInventory():
     modal True
-    python:
-        quick_menu = False
-
+    
     window:
-        background Frame("gui/inventoryWindow.png", 100, 20, 5, 20, False)
+        background Frame("gui/button/inventoryBackground.png", 2, 3, 2, 2, True)
         xsize 720
         ysize 540
         xalign 0.5
         yalign 0.5
+        
         vbox:
             yalign 0.8
-            textbutton "X" action SetVariable("quick_menu", True), Hide("playerInventory"):
-                yoffset 15
-                text_size 12
-                text_color "#ffffff"
+            imagebutton auto "gui/button/closebutton_%s.png" action Hide("playerInventory"):
+                yoffset 12
+                xsize 13
+                ysize 15
 
             hbox:
                 xsize 720
                 ysize 540
-                xalign 0.5
-                viewport:
-                    area(0.01, 0.04, 200, 510)
+                
+                vpgrid:
+                    style_prefix "x"
+                    cols 1
+                    area(0.01, 00.02, 200, 524)
                     scrollbars "vertical"
                     mousewheel True
                     draggable True
-
-                    xfill True
+                    
                     for i in inventory:
-                        vbox:
-                            textbutton i.name action SetVariable("currentDescription", i.description)
+                        textbutton i.name action SetVariable("currentDescription", i.description), SetVariable("currentSprite", i.sprite):
+                            xfill True
+                            ysize 42
+                            
+                            idle_background Frame("gui/button/[prefix_]inventoryButton.png", 2, 2, 2, 2, True)
+                            hover_background Frame("gui/button/[prefix_]inventoryButton.png", 2, 2, 2, 2, True)
+                            
+                            selected_hover_background Frame("gui/button/selected_hover_inventoryButton.png", 2, 2, 2, 2, True)
+                            selected_idle_background Frame("gui/button/selected_hover_inventoryButton.png", 2, 2, 2, 2, True)
+                            
+                            text_size 18
+                vbox:
+                    viewport:
+                        area(0.01, 00.04, 507, 262)
+                        scrollbars "vertical"
+                        mousewheel True
+                        draggable True
 
-                viewport:
-                    area(0.01, 0.04, 507, 510)
-                    scrollbars "vertical"
-                    mousewheel True
-                    draggable True
-
-                    text currentDescription
+                        text currentDescription:
+                            size 12
+                    frame:
+                        background None
+                        
+                        if currentSprite != None:
+                            area(0, 0, 507, 262)
+                            add currentSprite:
+                                xalign 0 yalign 0

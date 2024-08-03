@@ -5,8 +5,10 @@
 # Created by Atticus Young on 2/21/24.
 #
 #
+default currentFloor = 2
+
 init python:
-    currentFloor = 2
+    
 
     def leaveRoom():
         if currentFloor==0:
@@ -18,7 +20,7 @@ init python:
 
 label elevator:
     scene elevator
-    play music "music/ambience_elevator.mp3"
+    play music elevatorAmbience
     jump elevatorMenu
 
 label elevatorMenu:
@@ -31,10 +33,10 @@ label elevatorMenu:
 
                 "Floor 2":
                     $ currentFloor = 2
-                    play sound "soundClips/elevator_buttonClick.mp3"
+                    play sound elevatorButtonClick
                     $ renpy.pause(0.5, hard=True)
 
-                    play sound "soundClips/elevator_moving.ogg"
+                    play sound elevatorMoving
                     $ renpy.pause(0.650, hard=True)
                     with Shake((0, 0, 0, 0), 2.875, dist=5)
                     $ renpy.pause(8.360, hard=True)
@@ -43,10 +45,10 @@ label elevatorMenu:
 
                 "Floor 1":
                     $ currentFloor = 1
-                    play sound "soundClips/elevator_buttonClick.mp3"
+                    play sound elevatorButtonClick
                     $ renpy.pause(0.5, hard=True)
 
-                    play sound "soundClips/elevator_moving.ogg"
+                    play sound elevatorMoving
                     $ renpy.pause(0.650, hard=True)
                     with Shake((0, 0, 0, 0), 2.875, dist=5)
                     $ renpy.pause(8.360, hard=True)
@@ -55,10 +57,10 @@ label elevatorMenu:
 
                 "Basement":
                     $ currentFloor = 0
-                    play sound "soundClips/elevator_buttonClick.mp3"
+                    play sound elevatorButtonClick
                     $ renpy.pause(0.5, hard=True)
 
-                    play sound "soundClips/elevator_moving.ogg"
+                    play sound elevatorMoving
                     $ renpy.pause(0.650, hard=True)
                     with Shake((0, 0, 0, 0), 2.875, dist=5)
                     $ renpy.pause(8.360, hard=True)

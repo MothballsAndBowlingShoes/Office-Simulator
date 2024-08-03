@@ -8,10 +8,9 @@
 
 # MARK: script entry point
 
-default inventory = [deadRat]
+default inventory = [employeeID, deadRat]
 
 label start:
     #call tour
-    
     jump lobby
 return

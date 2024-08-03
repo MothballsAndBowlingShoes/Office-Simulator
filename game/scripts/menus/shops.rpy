@@ -56,5 +56,4 @@ label hallway_vendingMachineMenu_vendingMachineShops:
                 jump hallway_vendingMachineMenu_vendingMachineShops
         
         "Return":
-            jump hallway_vendingMachineMenu
-    return
+            jump vallory
