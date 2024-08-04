@@ -36,7 +36,6 @@ image deadRatInHand = "images/hand_deadRat.png"
 ##
 ## If the player decides against picking up the dead rat, they can choose to go back by selecting
 ## the "Go Back" option which then jumps back to the 'lobby' label.
-
 label janitorCloset:
     scene bg janitorcloset
     
