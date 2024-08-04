@@ -17,7 +17,7 @@ image darken = "#00000088"
 ################################################################################
 ## Labels
 ################################################################################
-## Label: bathroom #####################################################################
+## bathroom ####################################################################
 ##
 ## This scene represents a bathroom. It has a background image specific to the
 ## bathroom and displays a dialogue box with the character 'y' asking what action
