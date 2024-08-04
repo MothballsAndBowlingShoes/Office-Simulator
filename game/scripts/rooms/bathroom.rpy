@@ -17,11 +17,20 @@ image darken = "#00000088"
 ################################################################################
 ## Labels
 ################################################################################
-
-## Bathroom ####################################################################
+## Label: bathroom #####################################################################
 ##
-## The main handler for the Bathroom scene when they player enters.
-
+## This scene represents a bathroom. It has a background image specific to the
+## bathroom and displays a dialogue box with the character 'y' asking what action
+## you want to take.
+##
+## - If you choose "Throw Cherry bombs at the urinals", it will jump to a label
+##   called "eventUrinalsFirecrackers".
+##
+## - If you select "Talk to the ape", it will call a function or label (apeIntro) to
+##   continue the Ape questline.
+##
+## - If you choose "Leave", it will call the `nav_menu` function passing the
+##   parameter 'bathroomRooms' to display a navigation menu for the bathroom rooms.
 label bathroom:
     scene bg bathroom
 
@@ -33,15 +42,25 @@ label bathroom:
             jump eventUrinalsFirecrackers
 
         "Talk to the ape":
-            jump shop
+            jump apeIntro
         
         "Leave":
             call screen nav_menu(bathroomRooms)
 
-## eventUrinalsFirecrackers #####################################################
+## Label: eventUrinalsFirecrackers #####################################################
 ##
-## The main handler for the event where the player chooses to throw fire crackers
-## at the urinals.
+## This scene represents an event where you decide to throw cherry bombs at the urinals.
+##
+## - If you choose "{i}Do a sick flip!{/i}", it will play a sound effect for
+##   throwing a firecracker, apply a shake effect to simulate the explosion, and
+##   display a message that you hit the first urinal dead on.
+##
+## - If you select "{i}Do another flip!!{/i}", it will also play a sound effect
+##   for throwing a firecracker, apply a shake effect to simulate the explosion,
+##   and display a message that you nailed the other urinal.
+##
+## After performing the action, Jack rushes into the bathroom and reacts to your
+## actions in horror. He then points at you and orders you to come to his office.
 
 label eventUrinalsFirecrackers:  # Defining a label called 'event_urinals'
     "Despite the risk of getting fired, you procure a set of fire crackers from your pockets"
@@ -64,10 +83,21 @@ label eventUrinalsFirecrackers:  # Defining a label called 'event_urinals'
     show jack pointing  # Showing the 'jack_pointing' image
     j "Get.{w} In.{w} My.{w} Office.{w} Now.{w}"
 
-## bonziIntro ##################################################################
+## bonziIntro ##########################################################################
 ##
-## The main handler for first meeting bonzi. This first plays upon entering the
-## bathroom.
+## This scene represents an introduction to Bonzi, the Union Manager.
+## It starts with a darkened screen and an image of Bonzi in a neutral pose.
+## Bonzi greets you and reveals that he is the Union Manager forced into this company
+## after the recession of 2008. He complains about his situation and jack, and mentions
+## that he wants your help to move to another branch. Bonzi says that the main problem
+## is that Jack which has imprisoned him here with Ancient Microwave Magic. He gives
+## you a soggy list of items to find in order to help him escape.
+##
+## - You ask if it's illegal, he acknowledges that it would be if anyone cared about
+##   legality, but the business does a lot of other illegal things that would have
+##   gotten them shut down
+##
+## The player is then automatically taken back to the 'bathroom' label.
 
 label bonziIntro:  # Defining a label called 'bonzi_intro'
     show darken with dissolve  # Showing the 'darken' image with dissolve effect
@@ -96,7 +126,7 @@ label bonziIntro:  # Defining a label called 'bonzi_intro'
                     b "The main problem is that toaster"
                     # Playing an audio file
                     show bonzi worried
-                    b "He has imprisoned me here with Ancient Microwave Wizardry"
+                    b "He has imprisoned me here with Ancient Microwave Magic"
                     # Playing an audio file
                     b "I need you to help me escape"
                     b "I want you to steal contraband from around the office that will help me escape"
