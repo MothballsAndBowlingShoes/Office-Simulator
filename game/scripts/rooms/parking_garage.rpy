@@ -16,7 +16,7 @@ default garageRooms = ["Elevator", "Nevermind"]
 ########################################################################################
 ## parkingGarage #######################################################################
 ##
-## This code defines the parking garage label
+## This code defines the parking garage label.
 label parkingGarage:
     scene bg garage
     n "You enter the Parking Garage"

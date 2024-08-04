@@ -6,9 +6,20 @@
 #
 #
 
+########################################################################################
+## Variables
+########################################################################################
+default playerTraits = []
+default officeCoinAmount = 0
+
+########################################################################################
+## Labels
+########################################################################################
+## tour ################################################################################
+##
+## this label defines the tour segment that plays at the beginning of the game, where
+## Jack gives the player a tour around the building.
 label tour:
-    default playerTraits = []
-    default officeCoinAmount = 0
     
     scene bg lobby
     play music dayOneTheme
