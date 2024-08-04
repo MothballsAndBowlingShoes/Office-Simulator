@@ -6,13 +6,21 @@
 #
 #
 
+########################################################################################
+## Variables
+########################################################################################
 default garageRooms = ["Elevator", "Nevermind"]
+
+########################################################################################
+## Labels
+########################################################################################
+## parkingGarage #######################################################################
+##
+## This code defines the parking garage label
 label parkingGarage:
     scene bg garage
     n "You enter the Parking Garage"
     n "it smells of Motor oil and Dead Skunk"
-
-label parkingGarageMenu:
     menu:
         n "What would you like to do?"
         
