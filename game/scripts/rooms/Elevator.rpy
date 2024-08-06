@@ -63,22 +63,22 @@ label elevator:
     scene bg elevator
     play music elevatorAmbience
     y "What would you like to do?"
+    menu:
+        "Go to another Floor":
+            menu:
+                y "What floor should I go to?"
 
-    "Go to another Floor":
-        menu:
-            y "What floor should I go to?"
+                "Floor 2":
+                    $ moveElevator(2)
+                    jump elevator
 
-            "Floor 2":
-                $ moveElevator(2)
-                jump elevator
+                "Floor 1":
+                    $ moveElevator(1)
+                    jump elevator
 
-            "Floor 1":
-                $ moveElevator(1)
-                jump elevator
-
-            "Basement":
-                $ moveElevator(0)
-                jump elevator
-    
-    "Leave":
-        $ leaveRoom()
+                "Basement":
+                    $ moveElevator(0)
+                    jump elevator
+        
+        "Leave":
+            $ leaveRoom()
