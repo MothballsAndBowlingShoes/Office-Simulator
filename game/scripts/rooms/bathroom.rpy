@@ -42,7 +42,8 @@ label bathroom:
             jump eventUrinalsFirecrackers
 
         "Talk to the ape":
-            jump apeIntro
+            "add jump here"
+            #jump apeIntro
         
         "Leave":
             call screen nav_menu(bathroomRooms)

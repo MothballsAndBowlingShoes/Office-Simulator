@@ -48,6 +48,9 @@ label janitorCloset:
     elif ratGrabbed == False:
         n "The dead rat is still there!"
     
+    if metGiuseppe == False:
+        call giuseppe
+    
     menu:
         "Grab rat" if ratGrabbed == False:
             show deadRatInHand at left

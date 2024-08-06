@@ -1,18 +1,20 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "scripts/characters/randy.rpy", line 18, in script
-    r "Yep, you're talking too me all right"
-  File "game/01_fancytext.rpy", line 263, in render
-  File "game/01_fancytext.rpy", line 486, in blits_slow
-  File "game/01_fancytext.rpy", line 151, in slow_nonsense
-ZeroDivisionError: float division by zero
+While processing text tag {show_always_effect = always_shake(x = 1, y = 1)} in 'I am actually detective {show_always_effect = always_shake(x = 1, y = 1)}Cast Iron!{/show_always_effect}'.:
+  File "scripts/rooms/janitorCloset.rpy", line 52, in script call
+    call giuseppe
+  File "scripts/characters/giuseppe.rpy", line 46, in script
+    g "I am actually detective {show_always_effect = always_shake(x = 1, y = 1)}Cast Iron!{/show_always_effect}"
+  File "game/01_fancytext.rpy", line 234, in render
+Exception: Unknown text tag 'show_always_effect = always_shake(x = 1, y = 1)'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "scripts/characters/randy.rpy", line 18, in script
-    r "Yep, you're talking too me all right"
+  File "scripts/rooms/janitorCloset.rpy", line 52, in script call
+    call giuseppe
+  File "scripts/characters/giuseppe.rpy", line 46, in script
+    g "I am actually detective {show_always_effect = always_shake(x = 1, y = 1)}Cast Iron!{/show_always_effect}"
   File "/Applications/Ren'Py/renpy/ast.py", line 2560, in execute
     Say.execute(self)
   File "/Applications/Ren'Py/renpy/ast.py", line 615, in execute
@@ -63,12 +65,14 @@ Full traceback:
     surf = render(child, width, height, cst, cat)
   File "render.pyx", line 170, in renpy.display.render.render
   File "render.pyx", line 260, in renpy.display.render.render
-  File "game/01_fancytext.rpy", line 263, in render
-  File "game/01_fancytext.rpy", line 486, in blits_slow
-  File "game/01_fancytext.rpy", line 151, in slow_nonsense
-ZeroDivisionError: float division by zero
+  File "game/01_fancytext.rpy", line 234, in render
+  File "/Applications/Ren'Py/renpy/text/text.py", line 640, in __init__
+    self.paragraphs = self.segment(text.tokens, style, renders, text)
+  File "/Applications/Ren'Py/renpy/text/text.py", line 1394, in segment
+    raise Exception("Unknown text tag %r" % text)
+Exception: Unknown text tag 'show_always_effect = always_shake(x = 1, y = 1)'
 
 macOS-14.5-arm64-arm-64bit arm64
 Ren'Py 8.2.3.24061702
 Office Simulator 2025 InfDev
-Sat Aug  3 00:54:08 2024
+Mon Aug  5 22:53:08 2024

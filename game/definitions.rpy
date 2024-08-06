@@ -150,13 +150,15 @@ define j = Character("Jack", what_slow_abortable=False, color="#ffffff", callbac
 define y = Character("You", what_slow_abortable=False, color="#ffffff")
 define a = Character("Aiden", what_slow_abortable=False, color="#ffffff", callback=high_beep)
 define b = Character("Bonzi", what_slow_abortable=False, color="#ffffff")
-define g = Character("Giuseppe", what_slow_abortable=False, color="#ffffff")
+define g = Character("\"Giuseppe\"", callback=italian_Beep, what_slow_abortable=False, color="#ffffff")
+define ci = Character("Officer Cast Iron", callback=italian_Beep, what_slow_abortable=False, color="#ffffff")
 define s = Character("Sheryl", what_slow_abortable=False, color="#ffffff")
 define ra = Character("Rat", what_slow_abortable=False, color="#ffffff")
 define v = Character("Vallory The Vending Machine", what_slow_abortable=False, color="#ffffff")
 define n = Character("Narrator", callback=narrator_Beep, color="#ffffff", what_slow_abortable=False)
 define r = Character("Randy", callback=mid_beep, color="#ffffff", what_slow_abortable=False)
 
+image white = "#ffffff"
 
 ################################################################################
 ## Sound Defintions
@@ -189,6 +191,7 @@ define elevatorMoving = "audio/soundEffects/elevatorMoving.ogg"
 define elevatorButtonClick = "audio/soundEffects/elevatorButton.ogg"
 define fireCracker = "audio/soundEffects/fireCracker.ogg"
 define sprayBottle = "audio/soundEffects/sprayBottle.ogg"
+define giuseppeMustacheRemove = "audio/soundEffects/clothRip.ogg"
 
 ## Sound Fonts ################################################################
 ##
