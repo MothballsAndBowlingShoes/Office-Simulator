@@ -8,6 +8,15 @@
 
 default player_name = "Employee"
 
+## init Function #######################################################################
+##
+## The 'init' function is used as a global initializer in the RenPy game engine. In this
+## case, it contains an 'if' statement to check if the 'who' variable is not None within
+## a 'window' scope. If 'who' is not None, it creates another 'window' with the id
+## "namebox", style "namebox", and text as the value of 'who' with id "who". This
+## structure is followed by an commented out '# FancyText:' remark. The rest of the
+## code after this comment contains a 'fancytext' statement which uses variables for
+## displaying text effects. It also includes usage of the 'quick_menu' function.
 init -1:
     # FancyText: To use this say screen, you need to add the three parameters exactly as given!
     screen say(who, what, slow_effect = slow_typewriter, slow_effect_delay = 0, always_effect = None):
@@ -28,55 +37,93 @@ init -1:
             # some fancy effects on text display.
             fancytext what id "what" slow_effect slow_effect slow_effect_delay slow_effect_delay always_effect always_effect
         use quick_menu
-
+################################################################################
+## Classes and Functions
+################################################################################
 init python:
     import random
-    #sound font used by characters who have a "low" voice 100hz
+    
+## low_beep Function ###################################################################
+##
+## This function is used to play a 'low beep' sound effect in the game. It takes an
+## 'event' parameter and optional keyword arguments (**kwargs). If the event is set to
+## "show", it plays the sound file "low_beep.ogg" on the 'sound' channel with looping
+## enabled. If the event is "slow_done" or "end", it stops the sound playing on the 'sound' channel.
     def low_beep(event, **kwargs):
         if event == "show":
             renpy.music.play("soundFonts/low_beep.ogg", channel="sound", loop=True)
         elif event == "slow_done" or event == "end":
             renpy.music.stop(channel="sound")
 
-    #sound font used by characters who have a "medium" voice, 250 hz
+## mid_beep Function ###################################################################
+##
+## This function is used to play a 'mid beep' sound effect in the game. It takes an
+## 'event' parameter and optional keyword arguments (**kwargs). If the event is set to
+## "show", it plays the sound corresponding to the 'midBeep' variable on the 'sound'
+## channel with looping enabled. If the event is "slow_done" or "end", it stops the
+## sound playing on the 'sound' channel.
     def mid_beep(event, **kwargs):
         if event == "show":
             renpy.music.play(midBeep, channel="sound", loop=True)
         elif event == "slow_done" or event == "end":
             renpy.music.stop(channel="sound")
 
-    #sound font used by characters who have a "high" voice 500 hz
+## high_beep Function ##################################################################
+##
+## This function is used to play a 'high beep' sound effect in the game. It takes an
+## 'event' parameter and optional keyword arguments (**kwargs). If the event is set to
+## "show", it plays the sound corresponding to the 'highBeep' variable on the 'sound'
+## channel with looping enabled. If the event is "slow_done" or "end", it stops the
+## sound playing on the 'sound' channel.
     def high_beep(event, **kwargs):
         if event == "show":
             renpy.music.play(highBeep, channel="sound", loop=True)
         elif event == "slow_done" or event == "end":
             renpy.music.stop(channel="sound")
 
-    #sound font used by Jack, specifically made of Microwave beeps
+## microwave_beep Function #############################################################
+##
+## This function is used to play a 'microwave beep' sound effect in the game. It takes
+## an 'event' parameter and optional keyword arguments (**kwargs). If the event is set
+## to "show", it plays the sound corresponding to the 'microwaveBeep' variable on the
+## 'sound' channel with looping enabled. If the event is "slow_done" or "end", it stops
+## the sound playing on the 'sound' channel.
     def microwave_beep(event, **kwargs):
         if event == "show":
             renpy.music.play(microwaveBeep, channel="sound", loop=True)
         elif event == "slow_done" or event == "end":
             renpy.music.stop(channel="sound")
 
-    #sound font used by the narrator for non-speaker text, 500 hz with sawtooth wave
+## narrator_Beep Function #############################################
+##
+## This function is used to play a 'narrator beep' sound effect in the game. It takes an 'event' parameter and optional keyword arguments (**kwargs). If the event is set to "show", it plays the sound corresponding to the 'narratorBeep' variable on the 'sound' channel with looping enabled. If the event is "slow_done" or "end", it stops the sound playing on the 'sound' channel.
     def narrator_Beep(event, **kwargs):
         if event == "show":
             renpy.music.play(narratorBeep, channel="sound", loop=True)
         elif event == "slow_done" or event == "end":
             renpy.music.stop(channel="sound")
 
-    #sound font used by the Giuseppe when he talks, specifically made for him using Kevin Macleod's song "Bushwick Tarantella Loop"
+## italian_Beep Function #############################################
+##
+## This function is used to play an 'italian beep' sound effect in the game. It takes an 'event' parameter and optional keyword arguments (**kwargs). If the event is set to "show", it plays the sound corresponding to the 'italianBeep' variable on the 'sound' channel with looping enabled. If the event is "slow_done" or "end", it stops the sound playing on the 'sound' channel.
     def italian_Beep(event, **kwargs):
         if event == "show":
             renpy.music.play(italianBeep, channel="sound", loop=True)
         elif event == "slow_done" or event == "end":
             renpy.music.stop(channel="sound")
 
-    # Function that jumps to a random hallway label
+## jump_random_hallway Function ########################################################
+##
+## This function is used to randomly select and jump to a hallway event in the game.
+## It utilizes the 'random' module to generate a random number between 0 and 9,
+## inclusive, and then uses this value to choose a corresponding hallway event using the
+## 'renpy.jump' method.
     def jump_random_hallway():
         renpy.jump("hallway_event_%d" % random.randint(0,9))
 
+## item Class ##########################################################################
+##
+## This class is used to represent an item in the game. It has four attributes: 'name', 'description', 'price' and 'sprite'. The 'name' attribute represents the name of the item, while the 'description' attribute stores a brief description of the item. The 'price' attribute sets the cost or value of the item, and 'sprite' determines the visual representation of the item.
     class item:
         def __init__(self, name, description, price, sprite):
             self.name = name
@@ -86,6 +133,15 @@ init python:
 
     import math
 
+## Shaker Class ########################################################################
+##
+## This class is used to create a shaking animation effect in the game. It has three
+## main components: 'start' which defines the starting position, 'time' which sets the
+## duration of the shake, and 'child', which represents the object or element being
+## shaken.
+##
+## The Shaker class can be called to generate a shaking motion for a specified duration
+## with optional additional properties. The resulting animation can be added to any game object to create a shaking effect.
     class Shaker(object):
 
         anchors = {
@@ -137,12 +193,18 @@ init python:
 
     Shake = renpy.curry(_Shake)
 
+## Quest Class #########################################################################
+##
+## This class is used to represent a specific quest in the game. It has two attributes: 'name' and 'questStageDictionary'. The 'name' attribute represents the name of the quest, while the 'questStageDictionary' attribute stores information about the different stages of the quest. The initial value for the current quest stage is set to 10.
     class quest:
         def __init__(self, name, questStageDictionary):
             self.name = name
             self.questStageDictionary = questStageDictionary
             self.currentQuestStage = 10
     
+## dayTracker Class ####################################################################
+##
+## This class is used to track the time of day in the game. It has three attributes: 'day', 'hour', and 'minute'. The methods in this class allow for adding time and ending a day.
     class dayTracker:
         def __init__(self):
             self.day = 1
@@ -162,24 +224,34 @@ init python:
         def endDay():
             ++self.day
             renpy.jump(lobby)
+
+## trait Class #########################################################################
+##
+## This class is used to represent a specific characteristic of the game. It has two attributes: 'name' and 'description'. The 'name' attribute represents the name of the trait, while the 'description' attribute stores a brief description of the trait.
     class trait:
         def __init__(self, name, description):
             self.name = name
             self.description = description
+################################################################################
+## Definitions
+################################################################################
+## displayTime Function ################################################################
+##
+## This function is used to display the current time. It uses information from the dayTracker class to generate a formatted string with the hours and minutes, separated by a colon. If the minute value is not zero, it includes the minutes; otherwise, it shows '00' after the colon.
     def displayTime():
         if dayTacker.minute != 0:
             return str(dayTacker.hour) + ":" + str(dayTacker.minute)
         else:
             return str(dayTacker.hour) + ":00"
-#
-# Items
-#
+# define Items #############################################
+##
+## This block of code is defining two items in the game using the 'define' function from RenPy. Each item definition includes parameters like name, description, value, and image file associated with it.
 define deadRat = item("Dead Rat", "It's a dead rat you found in the Janitor's Closet. Why would you pick this up?", -30, "deadRatSprite.png")
 define employeeID = item("Employee ID", "Your employee ID. It's made from cheap plastic and smells vaguely of dollar store Lasagna. You're pretty sure it's a stolen drivers license with the details scribbled out and a blurry picture of your face glued on.", None, "EmployeeID.png")
 
-#
-# Character defintions
-#
+## define Characters ###################################################################
+##
+## This block of code is defining various characters in the game using the 'define' function from RenPy. Each character definition includes parameters like name, their respective callback sound effects, and other optional parameters such as color and whether 'what_slow_abortable' option is set to False.
 define j = Character("Jack", what_slow_abortable=False, color="#ffffff", callback=microwave_beep)
 define y = Character("You", what_slow_abortable=False, color="#ffffff")
 define a = Character("Aiden", what_slow_abortable=False, color="#ffffff", callback=high_beep)
@@ -316,6 +388,12 @@ define giuseppeQuest = quest("In the Name of the Law", giuseppeQuestStages)
 ## These are variables that keep track of things such as day or time.
 define dayTacker = dayTracker()
 
+## transform aiden_peek_1 ##############################################################
+##
+## This 'transform' function is used to create a visual effect for an image or character
+## in the game. In this case, it defines the 'aiden_peek_1' transformation which includes
+## positioning parameters like 'ypos', 'xpos', and 'rotate', as well as zoom and movement
+## animations using 'linear' and 'pause' commands.
 transform aiden_peek_1:
     ypos 0.1
     xpos 0.35
@@ -328,6 +406,12 @@ transform aiden_peek_1:
 
     linear 5 xpos 0.35
 
+## transform aiden_peek_2 ##############################################################
+##
+## This 'transform' function is used to create a visual effect for an image or character
+## in the game. It defines the 'aiden_peek_2' transformation which contains similar
+## positioning parameters as well as zoom, rotation, and movement animations with
+## 'linear', 'pause', and 'yoffset' commands.
 transform aiden_peek_2:
     ypos 0.05
     xpos -0.1
@@ -340,6 +424,12 @@ transform aiden_peek_2:
 
     linear 5 xpos -0.1
 
+## transform aiden_peek_3 ##############################################################
+##
+## This 'transform' function is used to create a visual effect for an image or character
+## in the game. The 'aiden_peek_3' transformation has its own set of positioning
+## parameters, complex animation movements using 'linear', 'yoffset', and 'xpos'
+## commands, as well as a unique rotate animation with 'rotate' command.
 transform aiden_peek_3:
     ypos 1
     yoffset -200
@@ -351,25 +441,14 @@ transform aiden_peek_3:
     linear 3 xpos 0.55
     linear 5 ypos 0.1 yoffset 250
 
+## transform aiden_reset ###############################################################
+##
+## This 'transform' function is used to create a visual effect for an image or character
+## in the game. The 'aiden_reset' transformation resets the character's position,
+## rotation, and scale by using 'ypos', 'xpos', 'rotate', and 'zoom' parameters.
 transform aiden_reset:
     ypos 0
     yoffset 0
     xpos 0.2
     rotate 0
     zoom 1
-
-transform text_effect:
-    parallel:
-        block:
-            linear 0.1 xoffset -2 yoffset 2
-            linear 0.1 xoffset 3 yoffset -3
-            linear 0.1 xoffset 2 yoffset -2
-            linear 0.1 xoffset -3 yoffset 3
-            linear 0.1 xoffset 0 yoffset 0
-            repeat
-    parallel:
-        block:
-            alpha .2
-            linear 1.0 alpha .9
-            linear 1.0 alpha .2
-            repeat
