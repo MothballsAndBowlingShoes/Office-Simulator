@@ -7,6 +7,7 @@
 #
 
 default player_name = "Employee"
+
 init -1:
     # FancyText: To use this say screen, you need to add the three parameters exactly as given!
     screen say(who, what, slow_effect = slow_typewriter, slow_effect_delay = 0, always_effect = None):
@@ -179,7 +180,6 @@ define employeeID = item("Employee ID", "Your employee ID. It's made from cheap 
 #
 # Character defintions
 #
-
 define j = Character("Jack", what_slow_abortable=False, color="#ffffff", callback=microwave_beep)
 define y = Character("You", what_slow_abortable=False, color="#ffffff")
 define a = Character("Aiden", what_slow_abortable=False, color="#ffffff", callback=high_beep)
@@ -285,15 +285,33 @@ define giuseppeQuestStages = {
 
     90: "It's a Setup! Jack has caught on to Giuseppe's scheme and sics his lawyers on you. You must defeat him!" # Giuseppe will come to the rescue of the player with his Italian powers, revealing his Italian heritage that he had hidden. If the player spared Randy he will help too.
 }
+## Traits #####################################################################
+##
+## All the possible Traits the player can have
+define bloodThirsty = trait("Blood Thirsty", "You have a lust for blood and will kill anything that stands in your way.")
+define charming = trait("Charming", "You're very charming and convincing. When talking to people you have more options to convince them")
+define detective = trait("TVA Detective", "You're a Detective for the TVA. You have an easier time finding things around the office")
+
+## Trait List ##################################################################
+##
+## The player's list of traits
+default playerTraits = []
+
 ## Quest Log ###################################################################
 ##
 ## The players log of current quests.
 default questLog = []
+
 ## Quests ######################################################################
 ##
 ## These are definitions describing ambience used in locations. These are things
 ## such as background sounds.
 define giuseppeQuest = quest("In the Name of the Law", giuseppeQuestStages)
+
+## trackers ######################################################################
+##
+## These are variables that keep track of things such as day or time.
+define dayTacker = dayTracker()
 
 transform aiden_peek_1:
     ypos 0.1
