@@ -1,78 +1,42 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While processing text tag {show_always_effect = always_shake(x = 1, y = 1)} in 'I am actually detective {show_always_effect = always_shake(x = 1, y = 1)}Cast Iron!{/show_always_effect}'.:
-  File "scripts/rooms/janitorCloset.rpy", line 52, in script call
-    call giuseppe
-  File "scripts/characters/giuseppe.rpy", line 46, in script
-    g "I am actually detective {show_always_effect = always_shake(x = 1, y = 1)}Cast Iron!{/show_always_effect}"
-  File "game/01_fancytext.rpy", line 234, in render
-Exception: Unknown text tag 'show_always_effect = always_shake(x = 1, y = 1)'
+While running game code:
+  File "renpy/common/00start.rpy", line 216, in script call
+    call _load_reload_game from _call__load_reload_game_1
+  File "renpy/common/00keymap.rpy", line 531, in script
+    python hide:
+  File "renpy/common/00keymap.rpy", line 531, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 542, in _execute_python_hide
+    renpy.load(renpy.session["_reload_slot"])
+AttributeError: Can't get attribute 'quest' on <renpy.python.StoreModule object at 0x105402190>
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "scripts/rooms/janitorCloset.rpy", line 52, in script call
-    call giuseppe
-  File "scripts/characters/giuseppe.rpy", line 46, in script
-    g "I am actually detective {show_always_effect = always_shake(x = 1, y = 1)}Cast Iron!{/show_always_effect}"
-  File "/Applications/Ren'Py/renpy/ast.py", line 2560, in execute
-    Say.execute(self)
-  File "/Applications/Ren'Py/renpy/ast.py", line 615, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "/Applications/Ren'Py/renpy/exports.py", line 1494, in say
-    who(what, *args, **kwargs)
-  File "/Applications/Ren'Py/renpy/character.py", line 1394, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "/Applications/Ren'Py/renpy/character.py", line 1045, in do_display
-    display_say(who,
-  File "/Applications/Ren'Py/renpy/character.py", line 741, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "/Applications/Ren'Py/renpy/ui.py", line 301, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "/Applications/Ren'Py/renpy/display/core.py", line 2166, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "/Applications/Ren'Py/renpy/display/core.py", line 2819, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-  File "/Applications/Ren'Py/renpy/display/core.py", line 1353, in draw_screen
-    surftree = renpy.display.render.render_screen(
-  File "render.pyx", line 486, in renpy.display.render.render_screen
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "/Applications/Ren'Py/renpy/display/layout.py", line 900, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "/Applications/Ren'Py/renpy/display/layout.py", line 900, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "/Applications/Ren'Py/renpy/display/layout.py", line 900, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "/Applications/Ren'Py/renpy/display/screen.py", line 754, in render
-    child = renpy.display.render.render(self.child, w, h, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "/Applications/Ren'Py/renpy/display/layout.py", line 900, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "/Applications/Ren'Py/renpy/display/layout.py", line 1361, in render
-    surf = render(child,
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "/Applications/Ren'Py/renpy/display/layout.py", line 900, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 260, in renpy.display.render.render
-  File "game/01_fancytext.rpy", line 234, in render
-  File "/Applications/Ren'Py/renpy/text/text.py", line 640, in __init__
-    self.paragraphs = self.segment(text.tokens, style, renders, text)
-  File "/Applications/Ren'Py/renpy/text/text.py", line 1394, in segment
-    raise Exception("Unknown text tag %r" % text)
-Exception: Unknown text tag 'show_always_effect = always_shake(x = 1, y = 1)'
+  File "renpy/common/00start.rpy", line 216, in script call
+    call _load_reload_game from _call__load_reload_game_1
+  File "renpy/common/00keymap.rpy", line 531, in script
+    python hide:
+  File "/Applications/Ren'Py/renpy/ast.py", line 823, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Applications/Ren'Py/renpy/python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00keymap.rpy", line 531, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 542, in _execute_python_hide
+    renpy.load(renpy.session["_reload_slot"])
+  File "/Applications/Ren'Py/renpy/loadsave.py", line 828, in load
+    roots, log = loads(log_data)
+  File "/Applications/Ren'Py/renpy/compat/pickle.py", line 100, in loads
+    return load(io.BytesIO(s))
+  File "/Applications/Ren'Py/renpy/compat/pickle.py", line 97, in load
+    return up.load()
+  File "/Applications/Ren'Py/renpy/compat/pickle.py", line 93, in find_class
+    return super().find_class(module, name)
+AttributeError: Can't get attribute 'quest' on <renpy.python.StoreModule object at 0x105402190>
 
 macOS-14.5-arm64-arm-64bit arm64
 Ren'Py 8.2.3.24061702
 Office Simulator 2025 InfDev
-Mon Aug  5 22:53:08 2024
+Tue Aug  6 17:51:01 2024
