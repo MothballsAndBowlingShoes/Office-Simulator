@@ -67,6 +67,33 @@ label giuseppe:
         $ metGiuseppe = True
         hide giuseppe
         with fade
+        return
     if giuseppeQuest.currentQuestStage == 10:
-        g "I take it you're ready for your first assignment?"
-    return
+        play music castIronTheme fadeout 1.0 fadein 1.0
+        show giuseppe neutralnostache
+        ci "I take it you're ready for your first assignment?"
+        menu:
+            "As ready as I was when I did 9/11.":
+                ci "That's the spirit!"
+            "Give it to me Daddy Cast Iron":
+                ci "Please don't refer to me as that %{player_name}d..."
+            "No, not yet":
+                ci "Come back when you're ready."
+                return
+        
+        ci "The first thing I need you to do is draw Sheryl away from her desk and then steal her emails for any incrimenating evidence you can use against her. Anything that can get her in legal trouble. Once you've done then you can swoop in and take care of her."
+        
+        menu:
+            "So... I kill her?":
+                ci "No. That's to messy. Her one crime is being involved with a Crime Family, and even then the worst she's done is Drug Trafficking, which is the CIA's business."
+                if bloodThirsty in playerTraits:
+                    menu:
+                        "What if i {i}really{/i} want to kill her?":
+                            ci "I'd really rather if you not, but since you're doing this for me... {w} If Sheryl has a little {i}\"Accident\"{/i} then I guess it's just one of those things..."
+                            $ canPlayerKillSherylFlag = True
+            "I'd feel a bit bad killing her... she seems like such a lovely lady.":
+                ci "Don't be fooled by her... she's a ruthless crime lore. Her family has ruled these streets for generations."
+                ci "She needs to be arrested before she can help the company commit more crimes."
+            
+            ci "Once you take her out, return to me and we can start work on the next objective."
+            $ giuseppeQuest.currentQuestStage = 20
