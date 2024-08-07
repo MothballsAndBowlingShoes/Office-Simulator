@@ -2,17 +2,17 @@
 errors listed below, and try again.
 
 
-File "scripts/characters/giuseppe.rpy", line 34: choice menuitem expects a non-empty block.
-    "Out of my way Pasta-Man, I have Salad Bars to fuck.":
-                                                          ^
+File "screens.rpy", line 1595: expected statement.
+    <<<<<<< HEAD
+                ^
 
-File "scripts/rooms/elevator.rpy", line 67: expected statement.
-    "Go to another Floor":
-                         ^
+File "screens.rpy", line 1600: expected statement.
+    =======
+          ^
 
-File "scripts/rooms/elevator.rpy", line 83: expected statement.
-    "Leave":
-           ^
+File "screens.rpy", line 1601: expected statement.
+    >>>>>>> npc_behavior
+                        ^
 
 Ren'Py Version: Ren'Py 8.2.3.24061702
-Mon Aug  5 22:18:18 2024
+Tue Aug  6 17:50:54 2024
