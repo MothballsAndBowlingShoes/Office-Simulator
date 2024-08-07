@@ -98,5 +98,6 @@ label giuseppe:
                 ci "She needs to be arrested before she can help the company commit more crimes."
             
         ci "Once you take her out, return to me and we can start work on the next objective."
+        $ dayTracker.addTime(30)
         $ giuseppeQuest.currentQuestStage = 20
         
