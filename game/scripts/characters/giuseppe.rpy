@@ -85,15 +85,18 @@ label giuseppe:
         
         menu:
             "So... I kill her?":
-                ci "No. That's to messy. Her one crime is being involved with a Crime Family, and even then the worst she's done is Drug Trafficking, which is the CIA's business."
-                if bloodThirsty in playerTraits:
-                    menu:
-                        "What if i {i}really{/i} want to kill her?":
-                            ci "I'd really rather if you not, but since you're doing this for me...{w} If Sheryl has a little {i}\"Accident\"{/i} then I guess it's just one of those things..."
-                            $ canPlayerKillSherylFlag = True
+            ci "No. That's to messy. Her one crime is being involved with a Crime Family, and even then the worst she's done is Drug Trafficking, which is the CIA's business."
+                menu:
+                    "What if i {i}really{/i} want to kill her?":
+                        ci "I'd really rather if you not, but since you're doing this for me...{w} If Sheryl has a little {i}\"Accident\"{/i} then I guess it's just one of those things..."
+                        $ canPlayerKillSherylFlag = True
+                        
+                    "I {suppose} i can keep the bloodshed to a minium.":
+                        
             "I'd feel a bit bad killing her... she seems like such a lovely lady.":
                 ci "Don't be fooled by her... she's a ruthless crime lore. Her family has ruled these streets for generations."
                 ci "She needs to be arrested before she can help the company commit more crimes."
             
-            ci "Once you take her out, return to me and we can start work on the next objective."
-            $ giuseppeQuest.currentQuestStage = 20
+        ci "Once you take her out, return to me and we can start work on the next objective."
+        $ giuseppeQuest.currentQuestStage = 20
+        
