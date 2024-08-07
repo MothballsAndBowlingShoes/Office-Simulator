@@ -59,13 +59,14 @@ label giuseppe:
             "I'm not sure...":
                 ci "There's no need to decide now, but if you decide you want to help me, you know where to find me. Take some time to think about it."
                 
-            "Oh boy, Count me in":
+            "Count me in.":
                 ci "Welcome aboard, %(player_name)s."
                 ci "Come back to me when you're read for your first assignment."
-                $ questStage = 1
+                $ giuseppeQuest.currentQuestStage = 10
                 $ questLog.append(giuseppeQuest)
-    
-    $ metGiuseppe = True
-    hide giuseppe
-    with fade
+        $ metGiuseppe = True
+        hide giuseppe
+        with fade
+    if giuseppeQuest.currentQuestStage == 10:
+        g "I take it you're ready for your first assignment?"
     return
