@@ -140,8 +140,36 @@ init python:
         def __init__(self, name, questStageDictionary):
             self.name = name
             self.questStageDictionary = questStageDictionary
-            self.currentQuestStage = 1
-
+            self.currentQuestStage = 10
+    
+    class dayTracker:
+        def __init__(self):
+            self.day = 1
+            self.hour = 9
+            self.minute = 0
+        
+        def addTime(minutesToAdd):
+            minute += minutesToAdd
+            
+            while minute >= 60:
+                self.minute - 60
+                ++self.hour
+            
+            if hour >= 21:
+                endDay()
+        
+        def endDay():
+            ++self.day
+            renpy.jump(lobby)
+    class trait:
+        def __init__(self, name, description):
+            self.name = name
+            self.description = description
+    def displayTime():
+        if dayTacker.minute != 0:
+            return str(dayTacker.hour) + ":" + str(dayTacker.minute)
+        else:
+            return str(dayTacker.hour) + ":00"
 #
 # Items
 #

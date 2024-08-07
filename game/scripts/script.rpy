@@ -11,6 +11,7 @@
 default inventory = [employeeID, deadRat]
 
 label start:
+    show screen timeAndDay
     #call tour
     jump lobby
 return

@@ -1647,3 +1647,15 @@ screen QuestMenu():
 
                         text currentDescription:
                             size 12
+
+screen timeAndDay():
+    modal False
+    zorder 50
+    window:
+        area(1, 1, 150, 100)
+        background Frame("gui/stickyNote.png", 1, 1, 1, 1, True)
+        vbox:
+            text "Day " + str(dayTacker.day):
+                size 32
+            text displayTime():
+                size 20
