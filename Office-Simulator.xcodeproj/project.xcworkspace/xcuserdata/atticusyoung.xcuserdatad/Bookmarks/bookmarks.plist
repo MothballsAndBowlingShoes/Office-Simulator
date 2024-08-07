@@ -7582,15 +7582,15 @@
 				<key>location-parameters</key>
 				<dict>
 					<key>EndingColumnNumber</key>
-					<string>16</string>
+					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>181</string>
+					<string>1649</string>
 					<key>StartingColumnNumber</key>
-					<string>12</string>
+					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>181</string>
+					<string>1649</string>
 					<key>Timestamp</key>
-					<string>744368784.584271</string>
+					<string>744685151.526866</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -7606,16 +7606,13 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>xpos</string>
+				<string></string>
 				<key>leading</key>
-				<string>        vbox:
-            xalign gui.dialogue_text_xalign
-            </string>
-				<key>trailing</key>
-				<string> gui.dialogue_xpos
-            xsize gui.dialogue_width
-            ypos gui.dialogue_ypos
+				<string>                        text currentDescription:
+                            size 12
 </string>
+				<key>trailing</key>
+				<string></string>
 			</dict>
 			<key>type</key>
 			<string>bookmark</string>

@@ -187,6 +187,8 @@ define valloryTheme = "audio/music/valloryTheme.ogg"
 define aidenTheme = "audio/music/aidenTheme.ogg"
 define dayOneTheme = "audio/music/theme1.ogg"
 define dayTwoTheme = "audio/music/valloryTheme.ogg"
+define giuseppeTheme = "audio/music/giuseppeTheme.ogg"
+define castIronTheme = "audio/music/castIronTheme.ogg"
 
 ## Sound Effects ################################################################
 ##
@@ -198,6 +200,8 @@ define elevatorButtonClick = "audio/soundEffects/elevatorButton.ogg"
 define fireCracker = "audio/soundEffects/fireCracker.ogg"
 define sprayBottle = "audio/soundEffects/sprayBottle.ogg"
 define giuseppeMustacheRemove = "audio/soundEffects/clothRip.ogg"
+define explosion = "audio/soundEffects/explosion.ogg"
+
 
 ## Sound Fonts ################################################################
 ##
@@ -209,6 +213,25 @@ define italianBeep = "audio/soundFonts/italianBeep.ogg"
 define microwaveBeep = "audio/soundFonts/microwaveBeep.ogg"
 define midBeep = "audio/soundFonts/midBeep.ogg"
 define narratorBeep = "audio/soundFonts/narratorBeep.ogg"
+
+################################################################################
+## Variables
+################################################################################
+## Quest Stages ################################################################
+##
+## These are Dictionaries of the quest stages
+define giuseppeQuestStages = {
+    1:"Giuseppe has asked you to help bring in the other employees of the Office. Go back to him when you're ready for your first assignment."
+}
+## Quest Log ###################################################################
+##
+## The players log of current quests.
+default questLog = []
+## Quests ######################################################################
+##
+## These are definitions describing ambience used in locations. These are things
+## such as background sounds.
+define giuseppeQuest = quest("In the Name of the Law", giuseppeQuestStages)
 
 transform aiden_peek_1:
     ypos 0.1
