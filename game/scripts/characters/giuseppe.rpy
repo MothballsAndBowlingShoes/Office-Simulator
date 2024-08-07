@@ -89,7 +89,7 @@ label giuseppe:
                 if bloodThirsty in playerTraits:
                     menu:
                         "What if i {i}really{/i} want to kill her?":
-                            ci "I'd really rather if you not, but since you're doing this for me... {w} If Sheryl has a little {i}\"Accident\"{/i} then I guess it's just one of those things..."
+                            ci "I'd really rather if you not, but since you're doing this for me...{w} If Sheryl has a little {i}\"Accident\"{/i} then I guess it's just one of those things..."
                             $ canPlayerKillSherylFlag = True
             "I'd feel a bit bad killing her... she seems like such a lovely lady.":
                 ci "Don't be fooled by her... she's a ruthless crime lore. Her family has ruled these streets for generations."
