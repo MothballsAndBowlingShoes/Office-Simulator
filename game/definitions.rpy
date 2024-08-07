@@ -136,6 +136,12 @@ init python:
 
     Shake = renpy.curry(_Shake)
 
+    class quest:
+        def __init__(self, name, questStageDictionary):
+            self.name = name
+            self.questStageDictionary = questStageDictionary
+            self.currentQuestStage = 1
+
 #
 # Items
 #
