@@ -264,6 +264,7 @@ screen quick_menu():
             textbutton _("{u}Q{/u}.Load") action QuickLoad()
             textbutton _("{u}P{/u}refs") action ShowMenu('preferences')
             textbutton _("{u}I{/u}nventory") action Show("playerInventory")
+            textbutton _("{u}Q{/u}uest Log") action Show("QuestMenu")
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
