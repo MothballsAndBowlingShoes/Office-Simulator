@@ -285,6 +285,9 @@ define giuseppeQuestStages = {
 
     90: "It's a Setup! Jack has caught on to Giuseppe's scheme and sics his lawyers on you. You must defeat him!" # Giuseppe will come to the rescue of the player with his Italian powers, revealing his Italian heritage that he had hidden. If the player spared Randy he will help too.
 }
+## Flag #######################################################################
+default canPlayerKillSherylFlag = False
+
 ## Traits #####################################################################
 ##
 ## All the possible Traits the player can have
