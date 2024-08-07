@@ -1591,3 +1591,58 @@ screen playerInventory():
                             area(0, 0, 507, 262)
                             add currentSprite:
                                 xalign 0 yalign 0
+
+## QuestMenu Comment ###################################################################
+##
+## This is the main window for displaying the quests in the game. It includes a close
+## button and a list of all available quests.
+screen QuestMenu():
+    modal True
+    
+    window:
+        background Frame("gui/button/inventoryBackground.png", 2, 3, 2, 2, True)
+        xsize 720
+        ysize 540
+        xalign 0.5
+        yalign 0.5
+        
+        vbox:
+            yalign 0.8
+            imagebutton auto "gui/button/closebutton_%s.png" action Hide("QuestMenu"):
+                yoffset 12
+                xsize 13
+                ysize 15
+
+            hbox:
+                xsize 720
+                ysize 540
+                
+                vpgrid:
+                    style_prefix "x"
+                    cols 1
+                    area(0.01, 00.02, 200, 524)
+                    scrollbars "vertical"
+                    mousewheel True
+                    draggable True
+                    
+                    for i in questLog:
+                        textbutton i.name action SetVariable("currentDescription", i.questStageDictionary[i.currentQuestStage]):
+                            xfill True
+                            ysize 42
+                            
+                            idle_background Frame("gui/button/[prefix_]inventoryButton.png", 2, 2, 2, 2, True)
+                            hover_background Frame("gui/button/[prefix_]inventoryButton.png", 2, 2, 2, 2, True)
+                            
+                            selected_hover_background Frame("gui/button/selected_hover_inventoryButton.png", 2, 2, 2, 2, True)
+                            selected_idle_background Frame("gui/button/selected_hover_inventoryButton.png", 2, 2, 2, 2, True)
+                            
+                            text_size 14
+                vbox:
+                    viewport:
+                        area(0.01, 00.02, 507, 524)
+                        scrollbars "vertical"
+                        mousewheel True
+                        draggable True
+
+                        text currentDescription:
+                            size 12
