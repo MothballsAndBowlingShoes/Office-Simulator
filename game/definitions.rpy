@@ -221,7 +221,28 @@ define narratorBeep = "audio/soundFonts/narratorBeep.ogg"
 ##
 ## These are Dictionaries of the quest stages
 define giuseppeQuestStages = {
-    1:"Giuseppe has asked you to help bring in the other employees of the Office. Go back to him when you're ready for your first assignment."
+    0:"" # Quest Failed.
+    10:"Giuseppe has asked you to help bring in the other employees of the Office. Go back to him when you're ready for your first assignment."
+    20:"Giuseppe revealed himself to be a TVA agent. He needs the player to distract Sheryl and sneak behind her desk too copy her emails for evidence."
+    30:"After stealing Sheryl's emails, Giuseppe wants the player too arrest her.\n (Optional) Convince Sheryl too turn herself in too the law and help you take down the others for a reduced sentence."
+    # End of Day One
+    
+    40:"You have Arrested Sheryl and brought her to Justice. She will be tried by her people for her crimes against humanity. Return to Giuseppe and collect your next task"
+    41:"Sheryl has agreed to give you information for a reduced sentence. She has revealed the only way to Defeat Aiden and Bonzi." # If she is talked down
+    50:"After defeating Sheryl Giuseppe next needs you to bring down Randy, the Office Punching Bag. He believes him to be responsible for a disappearance yesterday and needs to be taken down quickly before he can hurt someone else. \n (Optional) Talk Randy into joining your side."
+    51:"Randy has agreed to join your side. Talk to Giuseppe about letting him help." # If Randy is spared
+    # End of Day Two
+    
+    60:"After killing Randy, Giuseppe has given you your next assignment. You need to kill Aiden and Bonzi due to their strength being too strong. Because of their immense power you need to find out their weaknesses. He suggested checking their workspaces when they're not there." # Aiden will not be at his workspace at 12:00 for lunch and at 4:00 for his, while Bonzi will need to be distracted by convincing him their is a child's personal information outside in order to lure him out
+    61:"Although reluctant to let Randy help due to his dangerous nature, Giuseppe lets him help due to his combat skills and his grudge against the rest of the office being a good motivator." + giuseppeQuestStages[60] + ". \n (Optional) Have Randy help you kill Aiden and Bonzi." # If Randy is spared and helps the player
+    70:"I have killed Aiden, now I need to kill Bonzi."
+    71:giuseppeQuestStages[70] + "\n (Optional) have Randy help you kill Bonzi" # If Randy is spared and helps the player
+    72:"I have killed Bonzi, now I need to kill Aiden."
+    73:giuseppeQuestStages[72] + "\n (Optional) have Randy help you kill Aiden" # If Randy is spared and helps the player
+    #End of Day Three
+    
+    80:"After telling Giuseppe about Aiden and Bonzi's deaths, he has made me an official TVA detective. My final objective is too arrest Jack and the \"Manager\". It will be difficult. He suggests somehow getting a copy of Jack's schedule and breaking into his office to find some sort of evidence against him. \n (Optional) Forge Evidence against Jack to have him arrested." # If Sheryl is helping the player she can give them a copy of his schedule, if not then the player can check her computer for it. At 5 PM he will go outside to read the Economy Column of the Newspaper to de-stress.
+    90:"It's a Setup! Jack has caught on to Giuseppe's scheme and sics his lawyers on you. You must defeat him!" # Giuseppe will come to the rescue of the player with his Italian powers, revealing his Italian herritage that he had hidden. If the player spared Randy he will help too.
 }
 ## Quest Log ###################################################################
 ##
